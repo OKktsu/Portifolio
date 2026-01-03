@@ -9,18 +9,45 @@ const linkedin = document.querySelector('#linkedin');
 const github = document.querySelector('#github');
 const gmail = document.querySelector('#gmail');
 const whatsapp = document.querySelector('#whatsapp');
-const notificacao = document.querySelector('.notificacao')
+const notificacao = document.querySelector('.notificacao');
+const hamburger = document.querySelector('.hamburger');
+const navMenu = document.querySelector('nav ul');
+
+// Configuração inicial dos projetos
+const projectsToShow = 2; // Quantidade de projetos para mostrar inicialmente
+const allProjects = projetos.querySelectorAll('.card');
+
+// Esconde os projetos extras ao carregar a página
+allProjects.forEach((project, index) => {
+    if (index >= projectsToShow) {
+        project.classList.add('hidden');
+    }
+});
 
 button.addEventListener('click', function() {
-   
-    projetos.classList.toggle('active');
-    vermais.classList.toggle('active');
+    const isExpanded = button.textContent.includes('menos');
 
-    if(projetos.classList.contains('active')) {
+    if (isExpanded) {
+        // Recolher: esconde os extras e volta ao topo da seção
+        allProjects.forEach((project, index) => {
+            if (index >= projectsToShow) {
+                project.classList.add('hidden');
+                project.classList.remove('fade-in');
+            }
+        });
+        button.textContent = 'Ver mais projetos';
+        vermais.classList.remove('active');
+        projetos.scrollIntoView({ behavior: 'smooth' });
+    } else {
+        // Expandir: mostra todos
+        allProjects.forEach(project => {
+            if (project.classList.contains('hidden')) {
+                project.classList.remove('hidden');
+                project.classList.add('fade-in');
+            }
+        });
         button.textContent = ' Ver menos';
-    }
-    else{
-        button.textContent = 'Ver mais projetos'
+        vermais.classList.add('active');
     }
 });
 contato.onclick = function() {
@@ -68,3 +95,19 @@ gmail.onclick = function(){
         notificacao.classList.remove('active')
         }, 1000);
 }
+
+hamburger.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+});
+
+document.querySelectorAll('nav ul li a').forEach(link => {
+    link.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+    });
+});
+
+document.addEventListener('click', (e) => {
+    if (!hamburger.contains(e.target) && !navMenu.contains(e.target)) {
+        navMenu.classList.remove('active');
+    }
+});

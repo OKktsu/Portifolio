@@ -13,8 +13,7 @@ html{
 }
 /*Estilos gerais*/
 .btn{
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 20px;
     padding: 20px 50px;
     border: none;
     background-color: #792aef;
@@ -112,6 +111,13 @@ nav{
         }   
     }
 }
+.hamburger {
+    display: none;
+    font-size: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
 /*Home*/
 #home{
     display: flex;
@@ -123,7 +129,6 @@ nav{
     background-size: 100%;
     & h1{
         display: flex;
-        width: 300px;
         height: 100px;
         align-items: center;
         justify-content: center;
@@ -177,6 +182,44 @@ main{
     background-color: #dfdfdf;
 }
 /*Sections*/
+/*Pagina Experiencia*/
+section#experiencia {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 100px;
+    padding: 0 20px;
+}
+.experiencia-container {
+    display: flex;
+    gap: 30px;
+    width: 100%;
+    max-width: 1200px;
+}
+.experiencia-card {
+    background-color: #f1f1f1;
+    padding: 30px;
+    border-radius: 10px;
+    border-left: 5px solid #792aef;
+    transition: 0.3s;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+.experiencia-card:hover {
+    transform: translateX(10px);
+    background-color: #fff;
+}
+.experiencia-card h3 {
+    color: #313131;
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+.experiencia-card span {
+    color: #792aef;
+    font-weight: bold;
+    font-size: 14px;
+    display: block;
+    margin-bottom: 15px;
+}
 /*Pagina de projetos*/
 section#projetos{
     display: flex;
@@ -184,23 +227,23 @@ section#projetos{
     align-items: center;
     margin-top: 100px;
     position: relative;
-    height: 125vh;
-    overflow:  hidden;
-    &::before{
-        content: '';
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        height: 400px;
-        background: linear-gradient(transparent, #000);
-    }
-}
-section#projetos.active{
     height: auto;
-    &::before{
-        visibility: hidden;
-    }
+    scroll-margin-top: 100px; /* Ajuste para o menu fixo não cobrir o título ao rolar */
 }
+
+.card.hidden {
+    display: none;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+    animation: fadeIn 0.8s ease forwards;
+}
+
 .card{
     display: flex;
     align-items: center;
@@ -336,6 +379,7 @@ footer{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    z-index: 2;
     & img{
         margin-bottom: 10px;
         height: 40px;
@@ -387,4 +431,133 @@ footer{
     opacity: 1;
     visibility: visible;
     transition: .5s;
+}
+
+/* Responsividade para Mobile e Tablets */
+@media (max-width: 900px) {
+    /* Ajuste da Navbar */
+    nav {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 20px;
+    }
+    nav div {
+        position: static; /* Remove posição absoluta do logo */
+        margin-bottom: 0;
+    }
+    .hamburger {
+        display: block;
+    }
+    nav ul {
+        display: flex;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out, padding 0.5s ease-in-out;
+        box-shadow: none;
+    }
+    nav ul.active {
+        max-height: 500px;
+        opacity: 1;
+        padding: 20px 0;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    nav ul li {
+        margin: 15px 0;
+    }
+
+    /* Ajuste da Home */
+    #home h1 {
+        width: auto;
+        text-align: center;
+        font-size: 40px;
+    }
+    #home p {
+        width: 90%;
+    }
+    /* Barra social deixa de ser lateral e fica abaixo do botão */
+    #home > div.social {
+        position: static;
+        flex-direction: row;
+        width: auto;
+        margin-top: 30px;
+        background-color: transparent;
+    }
+
+    /* Seção Sobre Mim */
+    section#sobreMim {
+        padding: 50px 20px;
+    }
+    section#sobreMim .contanier {
+        flex-direction: column;
+    }
+    section#sobreMim .marcelo, 
+    section#sobreMim .tecnologias {
+        width: 100%;
+        margin-left: 0;
+        align-items: center;
+        text-align: center;
+    }
+    section#sobreMim .tecnologias::after {
+        display: none; /* Remove a linha divisória vertical */
+    }
+    section#sobreMim .tecnologias .contanier {
+        justify-content: center;
+    }
+
+    /* Seção Experiência */
+    section#experiencia {
+        padding: 50px 20px;
+    }
+
+    /* Seção Projetos */
+    section#projetos {
+        height: auto;
+        padding-bottom: 50px;
+    }
+    .card {
+        flex-direction: column;
+        margin-bottom: 80px;
+        height: auto;
+    }
+    .card img {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+    }
+    .card .info {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 20px;
+        align-items: center;
+        text-align: center;
+    }
+    .card .contanier {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    /* Footer */
+    footer {
+        padding: 50px 20px;
+        height: auto;
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+    footer p {
+        width: 100%;
+    }
+    footer .social {
+        justify-content: center;
+        display: flex;
+    }
 }

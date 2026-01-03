@@ -10,19 +10,20 @@
 <body>
     <nav>
         <div>
-            <img src="img/logo.png" alt="">
             <p>Marcelo Luan</p>
         </div>
+        <button class="hamburger">&#9776;</button>
         <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="#sobreMim">Sobre</a></li>
+            <li><a href="#experiencia">Experiência</a></li>
             <li><a href="#projetos">Projetos</a></li>
             <li><a id="contato">Contato</a></li>
         </ul>
     </nav> <!--Fim  sidebar-->
     <section id="home">
         <h1>
-            My, Portifolio
+            Meu Portifolio
         </h1>
         <p>
             Desenvolvedor Web, focado em desenvolvimento Front-End.
@@ -49,20 +50,56 @@
                         <div class="card">HTML</div>
                         <div class="card">SqlSever</div>
                         <div class="card">PHP</div>
-                        <div class="card">CSS</div><br>
+                        <div class="card">C#</div>
+                        <div class="card">CSS</div>
                         <div class="card">Python</div>
                         <div class="card">Java</div>
                         <div class="card">JavaScript</div>
+                        <div class="card">TypeScript</div>
+                        <div class="card">Angular</div>
+                        <div class="card">.NET</div>
+                        <div class="card">Bootstrap</div>
                     </div><!--Fim contanier2-->
                 </div><!--Fim contanier-->
             </div>
         </section> <!--Fim sobreMim-->
+        <section id="experiencia">
+            <h2 class="title">Experiência</h2>
+            <div class="experiencia-container">
+                <div class="experiencia-card">
+                    <h3>Desenvolvedor Full-stack Junior</h3>
+                    <span>PJ | 2025 - Atualmente</span>
+                    <p>Meu primeiro emprego atuando como desenvolvedor, entrei como desenvolvedor font-end onde desenvolvo interfaces responsivas e dinâmicas utilizando HTML, CSS, TypeScript e frameworks modernos como Angular e React. Após seis messes se tive a oportunidade de trabalhar como desenvolvedor full-stack junior, onde eu desenvolvo soluçoes com .Net e banco de dados.</p>
+                </div>
+                <div class="experiencia-card">
+                    <h3>Estudante de ADS</h3>
+                    <span>Faculdade | 2023 - 2025</span>
+                    <p>Aprendizado acadêmico focado em lógica de programação, banco de dados, engenharia de software e desenvolvimento web full-stack.</p>
+                </div>
+            </div>
+        </section> <!--Fim experiencia-->
         <section id="projetos">
             <h2 class="title">Projetos</h2>
             <div class="card">
+                <img src="img/projeto-infra.png" alt="">
+                <div class="info">
+                    <h3>Projeto 1 <br> <span>Projeto_Infra (em desenvolvimento)</span></h3>
+                    <p>
+                        infra, um projeto desenvolvido em Angular para estudo de componentes, rotas e serviços. Um estudo mais aprofundado do front-end e do Angular.
+                    </p>
+                    <div class="contanier">
+                        <div class="utilizado">HTML</div>
+                        <div class="utilizado">CSS</div>
+                        <div class="utilizado">JavaScript</div>
+                        <div class="utilizado">Angular</div>
+                    </div>
+                    <a href="https://infraprojeto.netlify.app/login" target="_blank"> <button class="btn">Ver mais...</button></a>
+                </div><!--Fim info-->
+            </div> <!--Fim card 1-->
+            <div class="card">
                 <img src="img/sidebar.png" alt="">
                 <div class="info">
-                    <h3>Projeto 1 <br> <span>Projeto_Sidebar</span></h3>
+                    <h3>Projeto 2 <br> <span>Projeto_Sidebar</span></h3>
                     <p>
                         Sidebar, um projeto que utilizei para estudar conceitos basicos do JavaScript.
                     </p>
@@ -73,11 +110,11 @@
                     </div>
                     <a href="https://okktsu.github.io/Sidebar/" target="_blank"> <button class="btn">Ver mais...</button></a>
                 </div><!--Fim info-->
-            </div> <!--Fim card 1-->
+            </div> <!--Fim card 2-->
             <div class="card">
                 <img src="img/projeto-netflix.png" alt="">
                 <div class="info">
-                    <h3>Projeto 2 <br><span>Projeto_NetflixLogin</span></h3>
+                    <h3>Projeto 3 <br><span>Projeto_NetflixLogin</span></h3>
                     <p>
                         Recriei a antiga tela de login da netflix para melhorar minhas habilidades de HTML e CSS.
                     </p>
@@ -87,7 +124,7 @@
                     </div>
                     <a href="https://okktsu.github.io/Projeto_NetflixLogin/" target="_blank"> <button class="btn">Ver mais...</button></a>
                 </div> <!--Fim info-->
-            </div> <!--Fim card 2-->
+            </div> <!--Fim card 3-->
         </section> <!--Fim projetos-->
         <div class="vermais">
             <button class="btn" id="vermais">Ver mais projetos</button>
@@ -112,11 +149,11 @@
     <div class="modal">
         <img src="img/icons8-linkedin-48color.png" alt="">
         <p id="linkedin">
-            Linkedin: https://www.linkedin.com/in/marcelo-luan/
+            Linkedin: <a href="https://www.linkedin.com/in/marcelo-luan/" target="_blank">https://www.linkedin.com/in/marcelo-luan/</a>
         </p>
         <img src="img/icons8-github-64.png" alt="">
         <p id="github">
-            Github: https://github.com/OKktsu
+            Github: <a href="https://github.com/OKktsu" target="_blank">https://github.com/OKktsu</a>
         </p>
         <img src="img/icons8-whatsapp-48color.png" alt="">
         <p id="whatsapp">
