@@ -1,113 +1,45 @@
-const button = document.querySelector('#vermais');
-const vermais = document.querySelector('.vermais');
-const contato = document.querySelector('#contato');
-const modal = document.querySelector('.modal');
-const main = document.querySelector('main');
-const home = document.querySelector('#home');
-const projetos = document.querySelector('#projetos');
-const linkedin = document.querySelector('#linkedin');
-const github = document.querySelector('#github');
-const gmail = document.querySelector('#gmail');
-const whatsapp = document.querySelector('#whatsapp');
-const notificacao = document.querySelector('.notificacao');
-const hamburger = document.querySelector('.hamburger');
-const navMenu = document.querySelector('nav ul');
+// Animações de Scroll (Intersection Observer)
+const revealElements = document.querySelectorAll('.group, section h2, .aspect-square, .flex-col > p');
 
-// Configuração inicial dos projetos
-const projectsToShow = 2; // Quantidade de projetos para mostrar inicialmente
-const allProjects = projetos.querySelectorAll('.card');
-
-// Esconde os projetos extras ao carregar a página
-allProjects.forEach((project, index) => {
-    if (index >= projectsToShow) {
-        project.classList.add('hidden');
-    }
-});
-
-button.addEventListener('click', function() {
-    const isExpanded = button.textContent.includes('menos');
-
-    if (isExpanded) {
-        // Recolher: esconde os extras e volta ao topo da seção
-        allProjects.forEach((project, index) => {
-            if (index >= projectsToShow) {
-                project.classList.add('hidden');
-                project.classList.remove('fade-in');
-            }
-        });
-        button.textContent = 'Ver mais projetos';
-        vermais.classList.remove('active');
-        projetos.scrollIntoView({ behavior: 'smooth' });
-    } else {
-        // Expandir: mostra todos
-        allProjects.forEach(project => {
-            if (project.classList.contains('hidden')) {
-                project.classList.remove('hidden');
-                project.classList.add('fade-in');
-            }
-        });
-        button.textContent = ' Ver menos';
-        vermais.classList.add('active');
-    }
-});
-contato.onclick = function() {
-    modal.classList.toggle('active');
-    main.style.opacity = 0.5;
-    home.style.opacity = 0.5;
-
-}
-main.onclick = function() {
-    modal.classList.remove('active');
-    main.style.opacity = 1;
-    home.style.opacity = 1;
-}
-home.onclick = function() { 
-    modal.classList.remove('active');
-    main.style.opacity = 1;
-    home.style.opacity = 1;   
-}
-linkedin.onclick = function(){
-    navigator.clipboard.writeText('https://www.linkedin.com/in/marcelo-luan/')
-    notificacao.classList.toggle('active')
-    setTimeout(() => {
-        notificacao.classList.remove('active')
-        }, 1000);
-    
-}
-github.onclick = function(){
-    navigator.clipboard.writeText('https://github.com/OKktsu')
-    notificacao.classList.toggle('active')
-    setTimeout(() => {
-        notificacao.classList.remove('active')
-        }, 1000);
-}
-whatsapp.onclick = function(){
-    navigator.clipboard.writeText('41941984821419')
-    notificacao.classList.toggle('active')
-    setTimeout(() => {
-        notificacao.classList.remove('active')
-        }, 1000);
-}
-gmail.onclick = function(){
-    navigator.clipboard.writeText('marceloluan125@gmial.com')
-    notificacao.classList.toggle('active')
-    setTimeout(() => {
-        notificacao.classList.remove('active')
-        }, 1000);
-}
-
-hamburger.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
-});
-
-document.querySelectorAll('nav ul li a').forEach(link => {
-    link.addEventListener('click', () => {
-        navMenu.classList.remove('active');
+const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            entry.target.style.opacity = 1;
+            entry.target.style.transform = 'translateY(0)';
+            observer.unobserve(entry.target); // Anima apenas 1 vez
+        }
     });
+}, {
+    threshold: 0.1,
+    rootMargin: "0px 0px -50px 0px"
 });
 
-document.addEventListener('click', (e) => {
-    if (!hamburger.contains(e.target) && !navMenu.contains(e.target)) {
-        navMenu.classList.remove('active');
-    }
+revealElements.forEach(el => {
+    // Adiciona a classe base inicial
+    el.style.opacity = 0;
+    el.style.transform = 'translateY(20px)';
+    el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+    revealObserver.observe(el);
 });
+
+// Lógica para copiar contatos para a área de transferência
+function copyToClipboard(text) {
+    navigator.clipboard.writeText(text).then(() => {
+        showToast();
+    }).catch(err => {
+        console.error('Falha ao copiar: ', err);
+    });
+}
+
+function showToast() {
+    const toast = document.getElementById('toast');
+    
+    // Mostra o toast subindo (removendo classe translateY e aumentando opacidade)
+    toast.classList.remove('translate-y-20', 'opacity-0');
+    
+    // Esconde depois de 2.5 segundos
+    setTimeout(() => {
+        toast.classList.add('translate-y-20', 'opacity-0');
+    }, 2500);
+}
