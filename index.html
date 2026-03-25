@@ -57,10 +57,10 @@
 <div class="flex flex-col gap-6 flex-1">
 <div class="flex flex-col gap-4 text-left">
 <h1 class="text-slate-900 dark:text-slate-100 text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-6xl">
-                                        Desenvolvedor Web Front-End
+                                        Desenvolvedor Full-stack
                                     </h1>
 <h2 class="text-slate-600 dark:text-slate-400 text-lg font-normal leading-relaxed max-w-[500px]">
-                                        Sempre gostei de resolver problemas lógicos. Apaixonado por tecnologia e focado em criar interfaces responsivas e dinâmicas utilizando as tecnologias mais recentes do mercado.
+                                        Especializado em criar soluções completas, do back-end ao front-end. Apaixonado por arquitetura de software, performance e por construir experiências digitais impactantes.
                                     </h2>
 </div>
 <div class="flex gap-4">
@@ -86,62 +86,100 @@
                                 Ver GitHub <span class="material-symbols-outlined text-sm">arrow_forward</span>
 </a>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-6 p-4">
-<!-- Project 1 -->
-<div class="flex flex-col gap-4 group cursor-pointer" onclick="window.open('https://infraprojeto.netlify.app/login', '_blank')">
-<div class="w-full aspect-video bg-center bg-no-repeat bg-cover rounded-xl border border-primary/10 overflow-hidden" data-alt="Projeto Infra" style="background-image: url('img/projeto-infra.png');">
-<div class="w-full h-full bg-primary/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-<span class="material-symbols-outlined text-white text-4xl">visibility</span>
-</div>
-</div>
-<div class="px-1">
-<p class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-normal group-hover:text-primary transition-colors">Projeto Infra</p>
-<p class="text-slate-500 dark:text-slate-400 text-sm font-normal leading-relaxed mt-1">Projeto desenvolvido em Angular para estudo de componentes, rotas e serviços.</p>
-<div class="flex gap-2 mt-3 flex-wrap">
-<span class="px-2 py-1 bg-primary/10 text-primary text-[10px] font-bold rounded uppercase">Angular</span>
-<span class="px-2 py-1 bg-primary/10 text-primary text-[10px] font-bold rounded uppercase">TypeScript</span>
-</div>
-</div>
-</div>
-<!-- Project 2 -->
-<div class="flex flex-col gap-4 group cursor-pointer" onclick="window.open('https://okktsu.github.io/Sidebar/', '_blank')">
-<div class="w-full aspect-video bg-center bg-no-repeat bg-cover rounded-xl border border-primary/10 overflow-hidden" data-alt="Projeto Sidebar" style="background-image: url('img/sidebar.png');">
-<div class="w-full h-full bg-primary/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-<span class="material-symbols-outlined text-white text-4xl">visibility</span>
-</div>
-</div>
-<div class="px-1">
-<p class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-normal group-hover:text-primary transition-colors">Projeto Sidebar</p>
-<p class="text-slate-500 dark:text-slate-400 text-sm font-normal leading-relaxed mt-1">Projeto que utilizei para estudar conceitos básicos de manipulação de DOM e JavaScript.</p>
-<div class="flex gap-2 mt-3 flex-wrap">
-<span class="px-2 py-1 bg-primary/10 text-primary text-[10px] font-bold rounded uppercase">JavaScript</span>
-<span class="px-2 py-1 bg-primary/10 text-primary text-[10px] font-bold rounded uppercase">CSS</span>
-</div>
-</div>
-</div>
-<!-- Project 3 -->
-<div class="flex flex-col gap-4 group cursor-pointer" onclick="window.open('https://okktsu.github.io/Projeto_NetflixLogin/', '_blank')">
-<div class="w-full aspect-video bg-center bg-no-repeat bg-cover rounded-xl border border-primary/10 overflow-hidden" data-alt="Projeto Netflix Login" style="background-image: url('img/projeto-netflix.png');">
-<div class="w-full h-full bg-primary/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-<span class="material-symbols-outlined text-white text-4xl">visibility</span>
-</div>
-</div>
-<div class="px-1">
-<p class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-normal group-hover:text-primary transition-colors">Netflix Login Clone</p>
-<p class="text-slate-500 dark:text-slate-400 text-sm font-normal leading-relaxed mt-1">Recriação da tela clássica de login da Netflix focado em estruturação HTML e estilização elegante.</p>
-<div class="flex gap-2 mt-3 flex-wrap">
-<span class="px-2 py-1 bg-primary/10 text-primary text-[10px] font-bold rounded uppercase">HTML</span>
-<span class="px-2 py-1 bg-primary/10 text-primary text-[10px] font-bold rounded uppercase">CSS</span>
-</div>
-</div>
-</div>
-</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-4">
+                <!-- Project 0: MenuBuilder -->
+                <div class="flex flex-col gap-4 group cursor-pointer" onclick="openMenuBuilderModal()">
+                    <div class="w-full aspect-video bg-center bg-no-repeat bg-cover rounded-xl border border-primary/10 overflow-hidden" data-alt="MenuBuilder" style="background-image: url('img/MenuBuilder.png');">
+                        <div class="w-full h-full bg-primary/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <span class="material-symbols-outlined text-white text-4xl">info</span>
+                        </div>
+                    </div>
+                    <div class="px-1">
+                        <div class="flex items-center gap-2">
+                            <p class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-normal group-hover:text-primary transition-colors">MenuBuilder</p>
+                            <span class="px-2 py-0.5 bg-amber-100 dark:bg-amber-900/30 text-amber-600 dark:text-amber-400 text-[10px] font-bold rounded-full border border-amber-200 dark:border-amber-800/50 flex items-center gap-1">
+                                <span class="relative flex h-1.5 w-1.5">
+                                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
+                                  <span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-amber-500"></span>
+                                </span>
+                                Em desenvolvimento
+                            </span>
+                        </div>
+                        <p class="text-slate-500 dark:text-slate-400 text-sm font-normal leading-relaxed mt-2">Plataforma de cardápios QR inteligentes com atualizações instantâneas e pedidos sem contato.</p>
+                        <div class="flex gap-2 mt-3 flex-wrap">
+                            <span class="px-2 py-1 bg-primary/10 text-primary text-[10px] font-bold rounded uppercase">Angular</span>
+                            <span class="px-2 py-1 bg-primary/10 text-primary text-[10px] font-bold rounded uppercase">TypeScript</span>
+                            <span class="px-2 py-1 bg-primary/10 text-primary text-[10px] font-bold rounded uppercase">C#</span>
+                            <span class="px-2 py-1 bg-primary/10 text-primary text-[10px] font-bold rounded uppercase">.NET</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 1 -->
+                <div class="flex flex-col gap-4 group cursor-pointer" onclick="window.open('https://infraprojeto.netlify.app/login', '_blank')">
+                    <div class="w-full aspect-video bg-center bg-no-repeat bg-cover rounded-xl border border-primary/10 overflow-hidden" data-alt="Projeto Infra" style="background-image: url('img/projeto-infra.png');">
+                        <div class="w-full h-full bg-primary/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <span class="material-symbols-outlined text-white text-4xl">visibility</span>
+                        </div>
+                    </div>
+                    <div class="px-1">
+                        <p class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-normal group-hover:text-primary transition-colors">Projeto Infra</p>
+                        <p class="text-slate-500 dark:text-slate-400 text-sm font-normal leading-relaxed mt-1">Projeto desenvolvido em Angular para estudo de componentes, rotas e serviços.</p>
+                        <div class="flex gap-2 mt-3 flex-wrap">
+                            <span class="px-2 py-1 bg-primary/10 text-primary text-[10px] font-bold rounded uppercase">Angular</span>
+                            <span class="px-2 py-1 bg-primary/10 text-primary text-[10px] font-bold rounded uppercase">TypeScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="flex flex-col gap-4 group cursor-pointer" onclick="window.open('https://okktsu.github.io/Sidebar/', '_blank')">
+                    <div class="w-full aspect-video bg-center bg-no-repeat bg-cover rounded-xl border border-primary/10 overflow-hidden" data-alt="Projeto Sidebar" style="background-image: url('img/sidebar.png');">
+                        <div class="w-full h-full bg-primary/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <span class="material-symbols-outlined text-white text-4xl">visibility</span>
+                        </div>
+                    </div>
+                    <div class="px-1">
+                        <p class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-normal group-hover:text-primary transition-colors">Projeto Sidebar</p>
+                        <p class="text-slate-500 dark:text-slate-400 text-sm font-normal leading-relaxed mt-1">Projeto que utilizei para estudar conceitos básicos de manipulação de DOM e JavaScript.</p>
+                        <div class="flex gap-2 mt-3 flex-wrap">
+                            <span class="px-2 py-1 bg-primary/10 text-primary text-[10px] font-bold rounded uppercase">JavaScript</span>
+                            <span class="px-2 py-1 bg-primary/10 text-primary text-[10px] font-bold rounded uppercase">CSS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="flex flex-col gap-4 group cursor-pointer" onclick="window.open('https://okktsu.github.io/Projeto_NetflixLogin/', '_blank')">
+                    <div class="w-full aspect-video bg-center bg-no-repeat bg-cover rounded-xl border border-primary/10 overflow-hidden" data-alt="Projeto Netflix Login" style="background-image: url('img/projeto-netflix.png');">
+                        <div class="w-full h-full bg-primary/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <span class="material-symbols-outlined text-white text-4xl">visibility</span>
+                        </div>
+                    </div>
+                    <div class="px-1">
+                        <p class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-normal group-hover:text-primary transition-colors">Netflix Login Clone</p>
+                        <p class="text-slate-500 dark:text-slate-400 text-sm font-normal leading-relaxed mt-1">Recriação da tela clássica de login da Netflix focado em estruturação HTML e estilização elegante.</p>
+                        <div class="flex gap-2 mt-3 flex-wrap">
+                            <span class="px-2 py-1 bg-primary/10 text-primary text-[10px] font-bold rounded uppercase">HTML</span>
+                            <span class="px-2 py-1 bg-primary/10 text-primary text-[10px] font-bold rounded uppercase">CSS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project In Development -->
+                <div class="flex flex-col gap-4 group border-2 border-dashed border-primary/10 rounded-xl p-8 items-center justify-center transition-all opacity-60">
+                    <div class="size-16 flex items-center justify-center bg-primary/5 rounded-full mb-2">
+                        <span class="material-symbols-outlined text-primary text-3xl">construction</span>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-slate-900 dark:text-slate-100 text-base font-bold">Em Desenvolvimento</p>
+                        <p class="text-slate-500 dark:text-slate-400 text-xs mt-1">Novas ideias vindo por aí...</p>
+                    </div>
+                </div>
+            </div>
 </section>
 <!-- Tech Stack -->
 <section class="py-16 relative overflow-hidden mb-12" id="experience">
-<!-- Abstract Background Shapes -->
-<div class="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-64 h-64 bg-[#792aef]/10 rounded-full blur-3xl"></div>
-<div class="absolute bottom-0 left-0 translate-y-1/2 -translate-x-1/2 w-80 h-80 bg-[#792aef]/5 rounded-full blur-3xl"></div>
 <div class="relative z-10"><div class="flex flex-col gap-2 mb-16 px-4">
 <h2 class="text-slate-900 dark:text-slate-100 text-3xl font-black leading-tight tracking-tight">Experiência Profissional</h2>
 <div class="h-1.5 w-12 bg-[#792aef] rounded-full"></div>
@@ -164,7 +202,7 @@
         </div>
 </div>
 <p class="text-slate-600 dark:text-slate-400 text-base leading-relaxed max-w-3xl">
-        Meu primeiro emprego atuando como desenvolvedor, entrei como desenvolvedor font-end onde desenvolvo interfaces responsivas e dinâmicas utilizando HTML, CSS, TypeScript e frameworks modernos como Angular e React. Após seis meses tive a oportunidade de trabalhar como desenvolvedor full-stack junior, onde desenvolvo soluções com .Net e banco de dados.
+        Meu primeiro emprego atuando como desenvolvedor, entrei como desenvolvedor font-end onde desenvolvo interfaces responsivas e dinâmicas utilizando HTML, CSS, TypeScript e frameworks modernos como Angular e React. Após certo tempo tive a oportunidade de trabalhar como desenvolvedor full-stack junior, onde desenvolvo soluções com .Net.
       </p>
 </div>
 </div>
@@ -201,22 +239,6 @@
 <!-- Skills list from original -->
 <!-- HTML, SqlSever, PHP, C#, CSS, Python, Java, JavaScript, TypeScript, Angular, .NET, Bootstrap, MongoDB -->
 <div class="flex flex-col items-center gap-3 p-4 bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-primary/5 hover:border-primary/30 transition-colors">
-<span class="material-symbols-outlined text-primary text-3xl">html</span>
-<span class="text-slate-700 dark:text-slate-300 font-medium text-sm">HTML</span>
-</div>
-<div class="flex flex-col items-center gap-3 p-4 bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-primary/5 hover:border-primary/30 transition-colors">
-<span class="material-symbols-outlined text-primary text-3xl">css</span>
-<span class="text-slate-700 dark:text-slate-300 font-medium text-sm">CSS</span>
-</div>
-<div class="flex flex-col items-center gap-3 p-4 bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-primary/5 hover:border-primary/30 transition-colors">
-<span class="material-symbols-outlined text-primary text-3xl">javascript</span>
-<span class="text-slate-700 dark:text-slate-300 font-medium text-sm">JavaScript</span>
-</div>
-<div class="flex flex-col items-center gap-3 p-4 bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-primary/5 hover:border-primary/30 transition-colors">
-<span class="material-symbols-outlined text-primary text-3xl">code</span>
-<span class="text-slate-700 dark:text-slate-300 font-medium text-sm">TypeScript</span>
-</div>
-<div class="flex flex-col items-center gap-3 p-4 bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-primary/5 hover:border-primary/30 transition-colors">
 <span class="material-symbols-outlined text-primary text-3xl">developer_board</span>
 <span class="text-slate-700 dark:text-slate-300 font-medium text-sm">Angular</span>
 </div>
@@ -229,22 +251,6 @@
 <span class="text-slate-700 dark:text-slate-300 font-medium text-sm">C# & .NET</span>
 </div>
 <div class="flex flex-col items-center gap-3 p-4 bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-primary/5 hover:border-primary/30 transition-colors">
-<span class="material-symbols-outlined text-primary text-3xl">view_quilt</span>
-<span class="text-slate-700 dark:text-slate-300 font-medium text-sm">Bootstrap</span>
-</div>
-<div class="flex flex-col items-center gap-3 p-4 bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-primary/5 hover:border-primary/30 transition-colors">
-<span class="material-symbols-outlined text-primary text-3xl">terminal</span>
-<span class="text-slate-700 dark:text-slate-300 font-medium text-sm">Python</span>
-</div>
-<div class="flex flex-col items-center gap-3 p-4 bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-primary/5 hover:border-primary/30 transition-colors">
-<span class="material-symbols-outlined text-primary text-3xl">local_cafe</span>
-<span class="text-slate-700 dark:text-slate-300 font-medium text-sm">Java</span>
-</div>
-<div class="flex flex-col items-center gap-3 p-4 bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-primary/5 hover:border-primary/30 transition-colors">
-<span class="material-symbols-outlined text-primary text-3xl">dns</span>
-<span class="text-slate-700 dark:text-slate-300 font-medium text-sm">PHP</span>
-</div>
-<div class="flex flex-col items-center gap-3 p-4 bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-primary/5 hover:border-primary/30 transition-colors">
 <span class="material-symbols-outlined text-primary text-3xl">data_object</span>
 <span class="text-slate-700 dark:text-slate-300 font-medium text-sm">MongoDB</span>
 </div>
@@ -253,6 +259,85 @@
 </section>
 </div>
 </main>
+
+<!-- Modal MenuBuilder -->
+<div id="modalMenuBuilder" class="fixed inset-0 z-[100] hidden items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm transition-all duration-300">
+    <div class="bg-white dark:bg-slate-900 w-full max-w-2xl rounded-2xl shadow-2xl overflow-hidden transform scale-95 opacity-0 transition-all duration-300" id="modalMenuBuilderContent">
+        <!-- Header Image -->
+        <div class="w-full h-48 bg-center bg-no-repeat bg-cover relative" style="background-image: url('img/MenuBuilder.png');">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent"></div>
+            <button onclick="closeMenuBuilderModal()" class="absolute top-4 right-4 size-8 flex items-center justify-center bg-white/20 hover:bg-white/40 backdrop-blur-md rounded-full text-white transition-colors">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+            <div class="absolute bottom-4 left-6">
+                <h3 class="text-white text-2xl font-bold">MenuBuilder</h3>
+                <p class="text-white/80 text-sm">Cardápios QR Inteligentes</p>
+            </div>
+        </div>
+        
+        <!-- Content -->
+        <div class="p-8 max-h-[60vh] overflow-y-auto">
+            <div class="flex flex-col gap-6">
+                <div>
+                    <h4 class="text-slate-900 dark:text-slate-100 font-bold mb-2 flex items-center gap-2">
+                        <span class="material-symbols-outlined text-primary">description</span>
+                        Sobre o Projeto
+                    </h4>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                        O MenuBuilder é uma solução completa para restaurantes que desejam modernizar seu atendimento. Através de um painel administrativo intuitivo, os estabelecimentos podem gerenciar seus produtos, preços e categorias em tempo real, gerando um QR Code único para os clientes acessarem o cardápio digital.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <h4 class="text-slate-900 dark:text-slate-100 font-bold mb-2 flex items-center gap-2">
+                            <span class="material-symbols-outlined text-amber-500">construction</span>
+                            Status Atual
+                        </h4>
+                        <div class="bg-amber-50 dark:bg-amber-900/20 border border-amber-100 dark:border-amber-800/50 p-4 rounded-xl h-full">
+                            <p class="text-amber-800 dark:text-amber-400 text-sm font-medium">
+                                Atualmente o projeto está em desenvolvimento focado no refinamento do dashboard, criação dos CRUDs e implementação de novas funcionalidades, autenticação de dois fatores.
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="text-slate-900 dark:text-slate-100 font-bold mb-2 flex items-center gap-2">
+                            <span class="material-symbols-outlined text-primary">terminal</span>
+                            Tecnologias
+                        </h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2 py-1 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-[10px] font-bold rounded uppercase">Angular</span>
+                            <span class="px-2 py-1 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-[10px] font-bold rounded uppercase">.NET Core</span>
+                            <span class="px-2 py-1 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-[10px] font-bold rounded uppercase">C#</span>
+                            <span class="px-2 py-1 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-[10px] font-bold rounded uppercase">SQL Server</span>
+                            <span class="px-2 py-1 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-[10px] font-bold rounded uppercase">Tailwind</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <div>
+                    <h4 class="text-slate-900 dark:text-slate-100 font-bold mb-2 flex items-center gap-2">
+                        <span class="material-symbols-outlined text-primary">trending_up</span>
+                        Próximos Passos
+                    </h4>
+                    <ul class="text-slate-600 dark:text-slate-400 text-sm space-y-2">
+                        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-[14px] text-primary">check_circle</span> Implementação de pedidos por WhatsApp.</li>
+                        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-[14px] text-primary">check_circle</span> Sistema de autenticação multifator.</li>
+                    </ul>
+                </div> -->
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="p-6 border-t border-slate-100 dark:border-slate-800 flex justify-end gap-3">
+            <button onclick="closeMenuBuilderModal()" class="px-5 py-2 text-slate-600 dark:text-slate-400 font-bold text-sm hover:text-primary transition-colors">Fechar</button>
+            <a href="https://menu-builder-front.vercel.app/login" target="_blank" class="px-5 py-2 bg-primary text-white font-bold text-sm rounded-lg hover:opacity-90 transition-opacity flex items-center gap-2">
+                Ver Demonstração
+                <span class="material-symbols-outlined text-sm">open_in_new</span>
+            </a>
+        </div>
+    </div>
+</div>
 
 <div id="toast" class="fixed bottom-4 right-4 bg-green-500 text-white px-6 py-3 rounded shadow-lg transform translate-y-20 opacity-0 transition-all duration-300 z-50">Texto copiado com sucesso!</div>
 
@@ -267,7 +352,7 @@
 <h2 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight">Marcelo Luan</h2>
 </div>
 <p class="text-slate-600 dark:text-slate-400 mb-6">
-    Sempre gostei de resolver problemas que envolvem raciocínio. Atualmente focando em ser o melhor desenvolvedor Web que posso ser, rumo ao full-stack!
+    Como desenvolvedor Full-stack, foco em entregar aplicações robustas e escaláveis, unindo a precisão das regras de negócio no back-end com a fluidez e beleza das interfaces no front-end.
 </p>
 <div class="flex gap-4">
 <a class="size-10 flex items-center justify-center rounded-full bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-primary hover:text-white transition-all cursor-pointer" onclick="copyToClipboard('https://www.linkedin.com/in/marcelo-luan/')">
@@ -285,7 +370,7 @@
 </div>
 <p class="text-xs text-slate-500 mt-2">Clique nos ícones para copiar a informação.</p>
 </div>
-<div class="flex flex-col gap-6">
+<!-- <div class="flex flex-col gap-6">
 <h3 class="text-slate-900 dark:text-slate-100 font-bold">Mande uma mensagem (Formulário Simulado)</h3>
 <form class="flex flex-col gap-4" onsubmit="event.preventDefault(); alert('Formulário em desenvolvimento! Use os contatos ao lado.');">
 <div class="relative">
@@ -294,7 +379,7 @@
 <textarea class="w-full bg-white dark:bg-slate-800 border border-primary/10 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary text-slate-900 dark:text-slate-100" placeholder="Sua mensagem" rows="3"></textarea>
 <button class="bg-primary text-white font-bold py-3 rounded-lg hover:opacity-90 transition-opacity">Enviar Mensagem</button>
 </form>
-</div>
+</div> -->
 </div>
 <div class="max-w-[960px] mx-auto border-t border-primary/5 mt-12 pt-8 text-center text-slate-500 dark:text-slate-500 text-xs">
                     © 2026 Marcelo Luan. Todos os direitos reservados.

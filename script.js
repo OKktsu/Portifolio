@@ -43,3 +43,46 @@ function showToast() {
         toast.classList.add('translate-y-20', 'opacity-0');
     }, 2500);
 }
+
+// Lógica de Modal MenuBuilder
+function openMenuBuilderModal() {
+    const modal = document.getElementById('modalMenuBuilder');
+    const content = document.getElementById('modalMenuBuilderContent');
+    
+    // Mostra o container
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+    
+    // Pequeno delay para a transição de entrada
+    setTimeout(() => {
+        content.classList.remove('scale-95', 'opacity-0');
+        content.classList.add('scale-100', 'opacity-100');
+    }, 10);
+    
+    // Previne scroll no body
+    document.body.style.overflow = 'hidden';
+}
+
+function closeMenuBuilderModal() {
+    const modal = document.getElementById('modalMenuBuilder');
+    const content = document.getElementById('modalMenuBuilderContent');
+    
+    // Transição de saída
+    content.classList.remove('scale-100', 'opacity-100');
+    content.classList.add('scale-95', 'opacity-0');
+    
+    // Esconde depois da animação
+    setTimeout(() => {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+        document.body.style.overflow = 'auto';
+    }, 300);
+}
+
+// Fecha modal ao clicar fora do conteúdo
+window.onclick = function(event) {
+    const modal = document.getElementById('modalMenuBuilder');
+    if (event.target == modal) {
+        closeMenuBuilderModal();
+    }
+}
