@@ -556,7 +556,7 @@ function Modal({ project, onClose }) {
 
 // ---------- TWEAKS WIRING ----------
 const DEFAULTS = /*EDITMODE-BEGIN*/{
-  "theme": "light",
+  "theme": "dark",
   "accent": "#7c28f0",
   "hero": "editorial",
   "density": "comfy",
