@@ -40,7 +40,7 @@ pnpm run preview
 
 ## Publicação
 
-O projeto está configurado para GitHub Pages no caminho `/Portifolio/`. O workflow em `.github/workflows/deploy.yml` publica automaticamente a versão de produção quando há um push na branch `main`.
+O projeto usa caminhos relativos para funcionar na Vercel, na Netlify e no GitHub Pages em `/Portifolio/`. O workflow em `.github/workflows/deploy.yml` publica automaticamente a versão de produção quando há um push na branch `main`.
 
 ## Contato
 
