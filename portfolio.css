@@ -51,6 +51,11 @@ body {
 a { color: inherit; text-decoration: none; }
 button { font: inherit; }
 
+:focus-visible {
+  outline: 3px solid color-mix(in oklab, var(--accent) 72%, white);
+  outline-offset: 4px;
+}
+
 /* ---------- CURSOR ---------- */
 .cursor-dot {
   position: fixed;
@@ -364,7 +369,7 @@ html[data-cursor="custom"] * {
 .term__line { display: flex; gap: 8px; align-items: baseline; }
 .term__p { color: var(--accent); }
 .term__c { color: var(--ink-3); }
-.term__$ { color: var(--ink-3); }
+.term__prompt { color: var(--ink-3); }
 .term__cmd { color: var(--ink); }
 .term__out { color: var(--ink-2); padding: 4px 0 10px 0; }
 .term__caret {
@@ -505,6 +510,7 @@ html[data-cursor="custom"] * {
   cursor: pointer;
   transition: padding .35s cubic-bezier(.2,.8,.2,1);
 }
+.project:focus-visible { border-radius: 8px; }
 .projects--compact .project { padding: 20px 8px; }
 .project:first-child { border-top: 1px solid var(--rule); }
 .project__num {
@@ -676,10 +682,10 @@ html[data-cursor="custom"] * {
 .stack {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 56px;
+  gap: 36px 28px;
 }
 @media (min-width: 880px) {
-  .stack { grid-template-columns: repeat(3, 1fr); }
+  .stack { grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); }
 }
 .stack__group-title {
   display: flex;
@@ -695,38 +701,19 @@ html[data-cursor="custom"] * {
   padding-bottom: 14px;
   border-bottom: 1px solid var(--rule);
 }
-.stack__list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 18px; }
-.skill { }
-.skill__head {
+.stack__list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+.skill {
   display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  margin-bottom: 8px;
+  align-items: center;
+  gap: 12px;
+  min-height: 46px;
+  padding: 10px 12px;
+  border: 1px solid var(--rule);
+  border-radius: 10px;
+  background: color-mix(in oklab, var(--card) 62%, transparent);
 }
+.skill__mark { color: var(--accent); font-family: var(--mono); }
 .skill__name { font-size: 16px; letter-spacing: -.01em; }
-.skill__lvl {
-  font-family: var(--mono);
-  font-size: 11px;
-  color: var(--ink-3);
-}
-.skill__bar {
-  width: 100%;
-  height: 2px;
-  background: var(--rule);
-  position: relative;
-  overflow: hidden;
-}
-.skill__bar i {
-  display: block;
-  height: 100%;
-  background: var(--accent);
-  transform-origin: left;
-  animation: grow 1.2s cubic-bezier(.2,.8,.2,1) both;
-}
-@keyframes grow {
-  from { transform: scaleX(0); }
-  to { transform: scaleX(1); }
-}
 
 /* ---------- CONTACT ---------- */
 .section--contact { padding-bottom: 60px; }
@@ -745,6 +732,7 @@ html[data-cursor="custom"] * {
   color: var(--accent);
   font-weight: 400;
 }
+.contact__cv { margin-top: 12px; }
 .contact__list { list-style: none; padding: 0; margin: 0; border-top: 1px solid var(--rule); }
 .contact__row {
   display: grid;
@@ -898,9 +886,6 @@ html[data-cursor="custom"] * {
 }
 .modal__meta div { display: flex; gap: 14px; }
 .modal__actions { display: flex; gap: 10px; flex-wrap: wrap; }
-
-/* ---------- TWEAKS PANEL OVERRIDES ---------- */
-.tweaks-panel { font-family: var(--sans) !important; }
 
 /* ---------- PRINT / SMALL TWEAKS ---------- */
 @media (prefers-reduced-motion: reduce) {
