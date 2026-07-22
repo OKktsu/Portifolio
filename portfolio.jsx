@@ -57,6 +57,19 @@ const PROJECTS = [
     link: "https://okktsu.github.io/Projeto_NetflixLogin/",
     role: "Frontend",
     year: "2023"
+  },
+  {
+    id: "mensagens",
+    num: "05",
+    title: "Mensagens",
+    subtitle: "Chat full-stack em tempo real",
+    desc: "Aplicação de mensagens criada para estudar arquitetura full-stack. Reúne autenticação JWT, API REST organizada em controllers e services, conversas persistidas e entrega de novas mensagens em tempo real com Socket.IO.",
+    tags: ["React", "TypeScript", "Node.js", "Express", "SQLite", "Prisma", "Socket.IO"],
+    status: "Em desenvolvimento",
+    cover: "radial-gradient(circle at 22% 28%, rgba(255,255,255,.96) 0 7%, transparent 7.5%), linear-gradient(135deg, transparent 0 18%, rgba(255,255,255,.2) 18% 42%, transparent 42%), radial-gradient(circle at 70% 65%, rgba(255,255,255,.9) 0 12%, transparent 12.5%), linear-gradient(135deg, #16213e, #5b4bdb 55%, #16a085)",
+    link: null,
+    role: "Full-stack",
+    year: "2026—"
   }
 ];
 
@@ -85,9 +98,9 @@ const EXPERIENCE = [
 ];
 
 const SKILLS = [
-  { group: "Frontend", items: ["Angular 14+", "TypeScript", "Tailwind CSS", "Bootstrap"] },
-  { group: "Backend", items: ["C#", ".NET Core / Framework"] },
-  { group: "Dados", items: ["SQL Server", "MongoDB"] },
+  { group: "Frontend", items: ["Angular 14+", "React", "TypeScript", "Tailwind CSS", "Bootstrap"] },
+  { group: "Backend", items: ["C#", ".NET Core / Framework", "Node.js", "Express"] },
+  { group: "Dados", items: ["SQL Server", "MongoDB", "SQLite", "Prisma"] },
   { group: "DevOps & entrega", items: ["Git / GitFlow", "Docker", "Azure DevOps", "Vercel"] },
   { group: "Métodos", items: ["Scrum", "Kanban"] }
 ];
@@ -390,7 +403,7 @@ function ProjectRow({ p, i, onOpen }) {
       <div
         className="project__preview"
         style={{
-          backgroundImage: `url(${p.img})`,
+          backgroundImage: p.img ? `url(${p.img})` : p.cover,
           opacity: hover ? 1 : 0,
           transform: hover ? "translate(-50%, -50%) scale(1) rotate(0deg)" : "translate(-50%, -45%) scale(.92) rotate(-2deg)"
         }}
@@ -553,7 +566,7 @@ function Modal({ project, onClose }) {
   return (
     <div className="modal" onClick={onClose}>
       <div className="modal__sheet" role="dialog" aria-modal="true" aria-labelledby="project-modal-title" onClick={(e) => e.stopPropagation()}>
-        <div className="modal__media" style={{ backgroundImage: `url(${project.img})` }}>
+        <div className="modal__media" style={{ backgroundImage: project.img ? `url(${project.img})` : project.cover }}>
           <button ref={closeRef} className="modal__close" onClick={onClose} aria-label="Fechar detalhes do projeto">
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 4L12 12M12 4L4 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/></svg>
           </button>
@@ -574,7 +587,11 @@ function Modal({ project, onClose }) {
             <div><span className="meta-key">stack</span>{project.tags.join(" · ")}</div>
           </div>
           <div className="modal__actions">
-            <a href={project.link} target="_blank" rel="noreferrer" className="btn btn--primary">Ver demonstração →</a>
+            {project.link ? (
+              <a href={project.link} target="_blank" rel="noreferrer" className="btn btn--primary">Ver demonstração →</a>
+            ) : (
+              <span className="tag tag--soft">Repositório privado</span>
+            )}
             <button onClick={onClose} className="btn btn--ghost">Fechar</button>
           </div>
         </div>
