@@ -7,8 +7,22 @@ const CV_URL = `${import.meta.env.BASE_URL}curriculo-marcelo-luan.pdf`;
 // ---------- DATA ----------
 const PROJECTS = [
   {
-    id: "menubuilder",
+    id: "mensagens",
     num: "01",
+    title: "Mensagens",
+    subtitle: "Plataforma de comunicação em tempo real",
+    desc: "Meu projeto principal: uma plataforma full-stack de comunicação com mensagens diretas, grupos e amizades. A aplicação combina autenticação JWT, busca global, anexos, prévias de links e eventos em tempo real com Socket.IO, além de chamadas de áudio e vídeo via WebRTC. O backend em Node.js e Express segue uma arquitetura separada em rotas, controllers e services, com persistência PostgreSQL no Supabase por meio do Prisma.",
+    tags: ["React", "TypeScript", "Node.js", "Express", "PostgreSQL", "Supabase", "Prisma", "Socket.IO", "WebRTC"],
+    status: "Em desenvolvimento",
+    img: "img/mensagens-chat.png",
+    link: null,
+    role: "Full-stack",
+    year: "2026—",
+    featured: true
+  },
+  {
+    id: "menubuilder",
+    num: "02",
     title: "MenuBuilder",
     subtitle: "Cardápios QR inteligentes",
     desc: "Plataforma SaaS para restaurantes gerenciarem cardápios digitais em tempo real. Painel administrativo, geração de QR único e pedidos sem contato.",
@@ -21,7 +35,7 @@ const PROJECTS = [
   },
   {
     id: "infra",
-    num: "02",
+    num: "03",
     title: "Projeto Infra",
     subtitle: "Estudo de arquitetura Angular",
     desc: "Aplicação para estudo aprofundado de componentes, rotas, guards e serviços. Foco em estrutura modular e padrões de comunicação.",
@@ -34,7 +48,7 @@ const PROJECTS = [
   },
   {
     id: "sidebar",
-    num: "03",
+    num: "04",
     title: "Sidebar",
     subtitle: "DOM e interatividade",
     desc: "Componente de navegação lateral construído do zero. Estudo de manipulação direta do DOM, transições e estados.",
@@ -47,7 +61,7 @@ const PROJECTS = [
   },
   {
     id: "netflix",
-    num: "04",
+    num: "05",
     title: "Netflix Login Clone",
     subtitle: "Recriação fiel de UI",
     desc: "Recriação da tela de login da Netflix com foco em estruturação semântica e estilização precisa.",
@@ -57,22 +71,8 @@ const PROJECTS = [
     link: "https://okktsu.github.io/Projeto_NetflixLogin/",
     role: "Frontend",
     year: "2023"
-  },
-  {
-    id: "mensagens",
-    num: "05",
-    title: "Mensagens",
-    subtitle: "Chat full-stack em tempo real",
-    desc: "Aplicação de mensagens criada para estudar arquitetura full-stack. Reúne autenticação JWT, API REST organizada em controllers e services, conversas persistidas e entrega de novas mensagens em tempo real com Socket.IO.",
-    tags: ["React", "TypeScript", "Node.js", "Express", "SQLite", "Prisma", "Socket.IO"],
-    status: "Em desenvolvimento",
-    cover: "radial-gradient(circle at 22% 28%, rgba(255,255,255,.96) 0 7%, transparent 7.5%), linear-gradient(135deg, transparent 0 18%, rgba(255,255,255,.2) 18% 42%, transparent 42%), radial-gradient(circle at 70% 65%, rgba(255,255,255,.9) 0 12%, transparent 12.5%), linear-gradient(135deg, #16213e, #5b4bdb 55%, #16a085)",
-    link: null,
-    role: "Full-stack",
-    year: "2026—"
   }
 ];
-
 const EXPERIENCE = [
   {
     role: "Desenvolvedor Full-stack",
@@ -100,7 +100,7 @@ const EXPERIENCE = [
 const SKILLS = [
   { group: "Frontend", items: ["Angular 14+", "React", "TypeScript", "Tailwind CSS", "Bootstrap"] },
   { group: "Backend", items: ["C#", ".NET Core / Framework", "Node.js", "Express"] },
-  { group: "Dados", items: ["SQL Server", "MongoDB", "SQLite", "Prisma"] },
+  { group: "Dados", items: ["SQL Server", "PostgreSQL", "Supabase", "MongoDB", "Prisma"] },
   { group: "DevOps & entrega", items: ["Git / GitFlow", "Docker", "Azure DevOps", "Vercel"] },
   { group: "Métodos", items: ["Scrum", "Kanban"] }
 ];
@@ -414,6 +414,7 @@ function ProjectsGrid({ onOpen, density }) {
             >
               <span className="magnetic-card__shade" />
               <span className="magnetic-card__number">{project.num}</span>
+              {project.featured && <span className="magnetic-card__featured">Projeto principal</span>}
               <span className="magnetic-card__label">
                 <strong>{project.title}</strong>
                 <small>{project.role}</small>
@@ -424,6 +425,7 @@ function ProjectsGrid({ onOpen, density }) {
 
         <div className="magnetic-carousel__footer" aria-live="polite">
           <div className="magnetic-carousel__copy">
+            {PROJECTS[active].featured && <span className="featured-pill">Projeto principal</span>}
             <span className="kicker">{PROJECTS[active].subtitle}</span>
             <p>{PROJECTS[active].desc}</p>
             <div className="magnetic-carousel__tags">
@@ -666,7 +668,7 @@ function Modal({ project, onClose }) {
   return (
     <div className="modal" onClick={onClose}>
       <div className="modal__sheet" role="dialog" aria-modal="true" aria-labelledby="project-modal-title" onClick={(e) => e.stopPropagation()}>
-        <div className="modal__media" style={{ backgroundImage: project.img ? `url(${project.img})` : project.cover }}>
+        <div className="modal__media" data-featured={project.featured || undefined} style={{ backgroundImage: project.img ? `url(${project.img})` : project.cover }}>
           <button ref={closeRef} className="modal__close" onClick={onClose} aria-label="Fechar detalhes do projeto">
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 4L12 12M12 4L4 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/></svg>
           </button>
