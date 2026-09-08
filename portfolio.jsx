@@ -234,16 +234,6 @@ function Hero({ variant, showMarquee = true }) {
 function HeroEditorial({ showMarquee }) {
   return (
     <section id="top" className="hero">
-      <h1 className="hero__title hero__title--xl">
-        <span className="hero__line">Construo</span>
-        <span className="hero__line hero__line--accent">
-          software
-          <span className="hero__cursor" />
-        </span>
-        <span className="hero__line">do banco</span>
-        <span className="hero__line hero__line--accent">ao botão.</span>
-      </h1>
-
       <TextRevealWall />
 
       <div className="hero__bottom hero__bottom--big">
@@ -285,7 +275,7 @@ function TextRevealWall() {
   };
 
   return (
-    <div
+    <h1
       ref={wallRef}
       className={`text-reveal-wall ${isActive ? "text-reveal-wall--active" : ""}`}
       onPointerEnter={(event) => { setIsActive(true); setRevealPosition(event); }}
@@ -304,7 +294,7 @@ function TextRevealWall() {
           <span className="text-reveal-wall__fill" aria-hidden="true">{line}</span>
         </span>
       ))}
-    </div>
+    </h1>
   );
 }
 function HeroTerminal({ tz }) {
