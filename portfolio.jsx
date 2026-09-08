@@ -4,7 +4,11 @@ import "./portfolio.css";
 
 const CV_URL = `${import.meta.env.BASE_URL}curriculo-marcelo-luan.pdf`;
 
-const TEXT_WALL_WORDS = ["FULL-STACK", "ARQUITETURA", "INTERFACES", "BACKEND", "DADOS", "PRODUTO", "REACT", "NODE.JS", "POSTGRESQL", "PERFORMANCE", "CLEAN CODE", "ENTREGA"];
+const TEXT_WALL_LINES = [
+  "ARQUITETURA · ARQUITETURA ·",
+  "FULL-STACK · FULL-STACK ·",
+  "DO BANCO AO BOTÃO ·",
+];
 
 // ---------- DATA ----------
 const PROJECTS = [
@@ -270,19 +274,35 @@ function HeroEditorial({ showMarquee }) {
 }
 
 function TextRevealWall() {
-  const [revealed, setRevealed] = useState(false);
+  const wallRef = useRef(null);
+  const [isActive, setIsActive] = useState(false);
+
+  const setRevealPosition = (event) => {
+    const rect = wallRef.current?.getBoundingClientRect();
+    if (!rect) return;
+    const position = Math.min(100, Math.max(0, ((event.clientX - rect.left) / rect.width) * 100));
+    wallRef.current.style.setProperty("--reveal-x", `${position}%`);
+  };
+
   return (
     <div
-      className={`text-reveal-wall ${revealed ? "text-reveal-wall--revealed" : ""}`}
-      onMouseEnter={() => setRevealed(true)}
-      onMouseLeave={() => setRevealed(false)}
-      onFocus={() => setRevealed(true)}
-      onBlur={() => setRevealed(false)}
+      ref={wallRef}
+      className={`text-reveal-wall ${isActive ? "text-reveal-wall--active" : ""}`}
+      onPointerEnter={(event) => { setIsActive(true); setRevealPosition(event); }}
+      onPointerMove={setRevealPosition}
+      onPointerLeave={() => setIsActive(false)}
+      onFocus={() => setIsActive(true)}
+      onBlur={() => setIsActive(false)}
       tabIndex={0}
-      aria-label="Áreas de atuação"
+      aria-label="Áreas de atuação. Passe o cursor para revelar"
     >
-      {TEXT_WALL_WORDS.map((word, index) => (
-        <span key={word} className="text-reveal-wall__word" style={{ "--word-index": index }}>{word}</span>
+      <span className="text-reveal-wall__hint">passe o cursor</span>
+      <span className="text-reveal-wall__beam" aria-hidden="true" />
+      {TEXT_WALL_LINES.map((line, index) => (
+        <span key={line} className="text-reveal-wall__line" style={{ "--line-index": index }}>
+          <span className="text-reveal-wall__outline">{line}</span>
+          <span className="text-reveal-wall__fill" aria-hidden="true">{line}</span>
+        </span>
       ))}
     </div>
   );
@@ -609,9 +629,15 @@ function About() {
 }
 
 function Stack() {
-  const skills = SKILLS.flatMap((group) => group.items.map((name) => ({ name, group: group.group })));
   const [activeIndex, setActiveIndex] = useState(0);
-  const activeSkill = skills[activeIndex];
+  const activeGroup = SKILLS[activeIndex];
+  const descriptions = [
+    "Interfaces responsivas, componentes reutilizáveis e experiências que respeitam o conteúdo.",
+    "APIs, autenticação e regras de negócio pensadas para sustentar o produto.",
+    "Modelagem, persistência e consultas para transformar dados em uma base confiável.",
+    "Versionamento, deploy e uma rotina de entrega simples de acompanhar.",
+    "Código organizado, decisões claras e evolução contínua em cada projeto.",
+  ];
 
   return (
     <section id="stack" className="section">
@@ -619,29 +645,38 @@ function Stack() {
       <div className="interactive-skill-grid">
         <div className="interactive-skill-grid__head">
           <span className="meta-key">explore a grade</span>
-          <span>Passe o cursor ou selecione uma tecnologia.</span>
+          <span>Cinco frentes que organizam meu trabalho.</span>
         </div>
-        <div className="interactive-skill-grid__cells" role="grid" aria-label="Tecnologias e ferramentas">
-          {skills.map((skill, index) => (
+        <div className="interactive-skill-grid__cells" role="tablist" aria-label="Tecnologias e ferramentas">
+          {SKILLS.map((group, index) => (
             <button
-              key={skill.name}
+              key={group.group}
               type="button"
               className="interactive-skill-grid__cell"
+              data-index={index}
               data-active={index === activeIndex}
+              role="tab"
+              aria-selected={index === activeIndex}
               onMouseEnter={() => setActiveIndex(index)}
               onFocus={() => setActiveIndex(index)}
               onClick={() => setActiveIndex(index)}
-              aria-pressed={index === activeIndex}
             >
-              <span>{skill.name}</span>
-              <small>{skill.group}</small>
+              <span className="interactive-skill-grid__number">0{index + 1}</span>
+              <strong>{group.group}</strong>
+              <span className="interactive-skill-grid__count">{group.items.length} ferramentas</span>
+              <span className="interactive-skill-grid__preview">{group.items.slice(0, 4).join(" · ")}</span>
             </button>
           ))}
         </div>
         <div className="interactive-skill-grid__active" aria-live="polite">
-          <span className="meta-key">em foco</span>
-          <strong>{activeSkill.name}</strong>
-          <span>{activeSkill.group}</span>
+          <div>
+            <span className="meta-key">em foco / 0{activeIndex + 1}</span>
+            <strong>{activeGroup.group}</strong>
+            <p>{descriptions[activeIndex]}</p>
+          </div>
+          <div className="interactive-skill-grid__tags" aria-label={`Ferramentas de ${activeGroup.group}`}>
+            {activeGroup.items.map((item) => <span key={item}>{item}</span>)}
+          </div>
         </div>
       </div>
     </section>
