@@ -73,6 +73,10 @@ const PROJECTS = [
     year: "2023"
   }
 ];
+
+const FEATURED_PROJECT = PROJECTS.find((project) => project.featured);
+const OTHER_PROJECTS = PROJECTS.filter((project) => !project.featured);
+
 const EXPERIENCE = [
   {
     role: "Desenvolvedor Full-stack",
@@ -345,7 +349,7 @@ function ProjectsGrid({ onOpen, density }) {
   const carouselRef = useRef(null);
   const dragStartRef = useRef(null);
   const draggedRef = useRef(false);
-  const total = PROJECTS.length;
+  const total = OTHER_PROJECTS.length;
   const select = (index) => setActive((index + total) % total);
 
   const handlePointerMove = (event) => {
@@ -359,6 +363,12 @@ function ProjectsGrid({ onOpen, density }) {
   return (
     <section id="work" className="section section--work">
       <SectionLabel num="01" kicker="Selected work" title="Projetos em destaque" />
+      {FEATURED_PROJECT && <FeaturedProject project={FEATURED_PROJECT} onOpen={onOpen} />}
+
+      <div className="projects-secondary-heading">
+        <span className="meta-key">mais projetos</span>
+        <span>Explore os outros estudos e produtos.</span>
+      </div>
       <div
         ref={carouselRef}
         className={`magnetic-carousel projects--${density}`}
@@ -387,10 +397,10 @@ function ProjectsGrid({ onOpen, density }) {
         }}
         role="region"
         aria-roledescription="carrossel"
-        aria-label="Projetos em destaque"
+        aria-label="Outros projetos"
       >
         <div className="magnetic-carousel__stage">
-          {PROJECTS.map((project, index) => (
+          {OTHER_PROJECTS.map((project, index) => (
             <button
               key={project.id}
               className="magnetic-card"
@@ -415,10 +425,7 @@ function ProjectsGrid({ onOpen, density }) {
               <span className="magnetic-card__shade" />
               <span className="magnetic-card__number">{project.num}</span>
               <span className="magnetic-card__label">
-                <span className="magnetic-card__title-row">
-                  <strong>{project.title}</strong>
-                  {project.featured && <span className="magnetic-card__featured">Projeto principal</span>}
-                </span>
+                <strong>{project.title}</strong>
                 <small>{project.role}</small>
               </span>
             </button>
@@ -427,10 +434,10 @@ function ProjectsGrid({ onOpen, density }) {
 
         <div className="magnetic-carousel__footer" aria-live="polite">
           <div className="magnetic-carousel__copy">
-            <span className="kicker">{PROJECTS[active].subtitle}</span>
-            <p>{PROJECTS[active].desc}</p>
+            <span className="kicker">{OTHER_PROJECTS[active].subtitle}</span>
+            <p>{OTHER_PROJECTS[active].desc}</p>
             <div className="magnetic-carousel__tags">
-              {PROJECTS[active].tags.map((tag) => <span key={tag} className="tag">{tag}</span>)}
+              {OTHER_PROJECTS[active].tags.map((tag) => <span key={tag} className="tag">{tag}</span>)}
             </div>
           </div>
           <div className="magnetic-carousel__controls">
@@ -441,7 +448,7 @@ function ProjectsGrid({ onOpen, density }) {
         </div>
 
         <div className="magnetic-carousel__dots" aria-label="Selecionar projeto">
-          {PROJECTS.map((project, index) => (
+          {OTHER_PROJECTS.map((project, index) => (
             <button
               key={project.id}
               className="carousel-dot"
@@ -454,6 +461,36 @@ function ProjectsGrid({ onOpen, density }) {
         </div>
       </div>
     </section>
+  );
+}
+
+function FeaturedProject({ project, onOpen }) {
+  return (
+    <article className="featured-project">
+      <button
+        className="featured-project__media"
+        onClick={() => onOpen(project)}
+        aria-label={`Abrir detalhes do projeto ${project.title}`}
+        style={{ backgroundImage: `url(${project.img})` }}
+      >
+        <span className="featured-project__number">{project.num}</span>
+      </button>
+      <div className="featured-project__body">
+        <span className="kicker">{project.subtitle}</span>
+        <div className="featured-project__title-row">
+          <h3>{project.title}</h3>
+          <span className="status status--dev"><i /> {project.status}</span>
+        </div>
+        <p>{project.desc}</p>
+        <div className="featured-project__tags">
+          {project.tags.map((tag) => <span key={tag} className="tag">{tag}</span>)}
+        </div>
+        <div className="featured-project__actions">
+          <a className="btn btn--primary" href={project.link} target="_blank" rel="noreferrer">Ver projeto &rarr;</a>
+          <button className="btn btn--ghost" onClick={() => onOpen(project)}>Detalhes</button>
+        </div>
+      </div>
+    </article>
   );
 }
 function ProjectRow({ p, i, onOpen }) {
