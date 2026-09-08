@@ -15,7 +15,7 @@ const PROJECTS = [
     tags: ["React", "TypeScript", "Node.js", "Express", "PostgreSQL", "Supabase", "Prisma", "Socket.IO", "WebRTC"],
     status: "Em desenvolvimento",
     img: "img/mensagens-chat.png",
-    link: null,
+    link: "https://frontend-beta-kohl-59.vercel.app/",
     role: "Full-stack",
     year: "2026—",
     featured: true
@@ -357,7 +357,7 @@ function ProjectsGrid({ onOpen, density }) {
   };
 
   return (
-    <section id="work" className="section">
+    <section id="work" className="section section--work">
       <SectionLabel num="01" kicker="Selected work" title="Projetos em destaque" />
       <div
         ref={carouselRef}
@@ -414,9 +414,11 @@ function ProjectsGrid({ onOpen, density }) {
             >
               <span className="magnetic-card__shade" />
               <span className="magnetic-card__number">{project.num}</span>
-              {project.featured && <span className="magnetic-card__featured">Projeto principal</span>}
               <span className="magnetic-card__label">
-                <strong>{project.title}</strong>
+                <span className="magnetic-card__title-row">
+                  <strong>{project.title}</strong>
+                  {project.featured && <span className="magnetic-card__featured">Projeto principal</span>}
+                </span>
                 <small>{project.role}</small>
               </span>
             </button>
@@ -425,7 +427,6 @@ function ProjectsGrid({ onOpen, density }) {
 
         <div className="magnetic-carousel__footer" aria-live="polite">
           <div className="magnetic-carousel__copy">
-            {PROJECTS[active].featured && <span className="featured-pill">Projeto principal</span>}
             <span className="kicker">{PROJECTS[active].subtitle}</span>
             <p>{PROJECTS[active].desc}</p>
             <div className="magnetic-carousel__tags">
