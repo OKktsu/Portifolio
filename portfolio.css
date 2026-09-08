@@ -207,79 +207,12 @@ html[data-cursor="custom"] * {
   flex-direction: column;
   justify-content: center;
 }
-.hero--home {
-  max-width: none;
-  min-height: calc(100svh - 68px);
-  padding: clamp(46px, 7vh, 96px) clamp(20px, 5vw, 56px) 0;
-  display: grid;
-  grid-template-rows: auto minmax(280px, 1fr) auto auto;
-  justify-content: stretch;
-  align-items: stretch;
-  gap: clamp(24px, 4.5vh, 54px);
-}
-.hero__home-kicker {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-  color: var(--ink-3);
-  font-family: var(--mono);
-  font-size: 10px;
-  letter-spacing: .12em;
-  text-transform: uppercase;
-}
 .hero__title--xl {
   font-size: clamp(64px, 16vw, 260px);
-  margin: 0 0 30px;
+  margin: 0 0 64px;
   letter-spacing: -0.055em;
   font-weight: 500;
   line-height: .88;
-}
-.text-reveal-wall {
-  --reveal-x: 50%;
-  position: relative;
-  display: grid;
-  align-content: center;
-  gap: clamp(4px, .8vw, 12px);
-  max-width: none;
-  min-width: 0;
-  margin: 0;
-  padding: clamp(24px, 4vh, 52px) 0;
-  overflow: hidden;
-  border-top: 1px solid var(--rule);
-  border-bottom: 1px solid var(--rule);
-  outline: none;
-  cursor: crosshair;
-}
-.text-reveal-wall::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background: linear-gradient(90deg, transparent calc(var(--reveal-x) - 13%), color-mix(in oklab, var(--accent) 12%, transparent) var(--reveal-x), transparent calc(var(--reveal-x) + 13%));
-  opacity: .55;
-  transition: opacity .25s ease;
-}
-.text-reveal-wall--active::before { opacity: 1; }
-.text-reveal-wall__hint { position: absolute; top: 12px; right: 0; z-index: 2; color: var(--ink-3); font-family: var(--mono); font-size: 9px; letter-spacing: .12em; text-transform: uppercase; }
-.text-reveal-wall__beam { position: absolute; top: 0; bottom: 0; left: var(--reveal-x); z-index: 2; width: 1px; background: var(--accent); opacity: .5; transition: opacity .2s ease, left .08s linear; }
-.text-reveal-wall--active .text-reveal-wall__beam { opacity: .9; }
-.text-reveal-wall__line { position: relative; display: block; font-size: clamp(50px, 8.2vw, 154px); font-weight: 500; letter-spacing: -.085em; line-height: .78; white-space: nowrap; }
-.text-reveal-wall__line:last-child { font-size: clamp(38px, 6.6vw, 124px); }
-.text-reveal-wall__outline, .text-reveal-wall__fill { display: block; padding-right: 6px; }
-.text-reveal-wall__outline { color: transparent; -webkit-text-stroke: 1px color-mix(in oklab, var(--ink-3) 48%, transparent); transition: -webkit-text-stroke-color .25s ease; }
-.text-reveal-wall__fill { position: absolute; inset: 0; width: 100%; color: var(--ink); clip-path: inset(0 0 0 0); opacity: 1; transition: color .2s ease, transform .25s ease; }
-.text-reveal-wall__line:nth-of-type(4) .text-reveal-wall__fill { color: var(--accent); }
-.text-reveal-wall--active .text-reveal-wall__fill { transform: translateX(5px); }
-.text-reveal-wall--active .text-reveal-wall__outline { -webkit-text-stroke-color: color-mix(in oklab, var(--ink-3) 30%, transparent); }
-.text-reveal-wall:focus-visible { outline: 1px solid var(--accent); outline-offset: 8px; }
-@media (max-width: 680px) {
-  .hero--home { min-height: calc(100svh - 64px); padding-top: 34px; gap: 30px; }
-  .hero__home-kicker { font-size: 8px; letter-spacing: .08em; }
-  .hero__home-kicker span:last-child { display: none; }
-  .text-reveal-wall { min-height: 310px; padding: 26px 0; }
-  .text-reveal-wall__line { font-size: clamp(43px, 13.4vw, 76px); line-height: .84; }
-  .text-reveal-wall__line:last-child { font-size: clamp(33px, 9.8vw, 58px); }
-  .text-reveal-wall__hint { display: none; }
 }
 .hero__bottom--big {
   border-top: 1px solid var(--rule);
@@ -381,7 +314,6 @@ html[data-cursor="custom"] * {
 @media (min-width: 880px) { .hero__actions { justify-self: end; } }
 
 /* marquee */
-.hero--home .hero__marquee { margin-top: 0; align-self: end; }
 .hero__marquee {
   margin-top: 80px;
   border-top: 1px solid var(--rule);
