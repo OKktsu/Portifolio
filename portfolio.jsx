@@ -5,9 +5,9 @@ import "./portfolio.css";
 const CV_URL = `${import.meta.env.BASE_URL}curriculo-marcelo-luan.pdf`;
 
 const TEXT_WALL_LINES = [
-  "ARQUITETURA · ARQUITETURA ·",
-  "FULL-STACK · FULL-STACK ·",
-  "DO BANCO AO BOTÃO ·",
+  "ARQUITETURA",
+  "FULL-STACK",
+  "DO BANCO AO BOTÃO",
 ];
 
 // ---------- DATA ----------
@@ -233,7 +233,11 @@ function Hero({ variant, showMarquee = true }) {
 
 function HeroEditorial({ showMarquee }) {
   return (
-    <section id="top" className="hero">
+    <section id="top" className="hero hero--home">
+      <div className="hero__home-kicker">
+        <span>Marcelo Luan / Desenvolvedor full-stack</span>
+        <span>Curitiba, PR · Brasil</span>
+      </div>
       <TextRevealWall />
 
       <div className="hero__bottom hero__bottom--big">
