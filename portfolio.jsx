@@ -4,11 +4,6 @@ import "./portfolio.css";
 
 const CV_URL = `${import.meta.env.BASE_URL}curriculo-marcelo-luan.pdf`;
 
-const TEXT_WALL_LINES = [
-  "ARQUITETURA",
-  "FULL-STACK",
-  "DO BANCO AO BOTÃO",
-];
 
 // ---------- DATA ----------
 const PROJECTS = [
@@ -233,12 +228,16 @@ function Hero({ variant, showMarquee = true }) {
 
 function HeroEditorial({ showMarquee }) {
   return (
-    <section id="top" className="hero hero--home">
-      <div className="hero__home-kicker">
-        <span>Marcelo Luan / Desenvolvedor full-stack</span>
-        <span>Curitiba, PR · Brasil</span>
-      </div>
-      <TextRevealWall />
+    <section id="top" className="hero">
+      <h1 className="hero__title hero__title--xl">
+        <span className="hero__line">Construo</span>
+        <span className="hero__line hero__line--accent">
+          software
+          <span className="hero__cursor" />
+        </span>
+        <span className="hero__line">do banco</span>
+        <span className="hero__line hero__line--accent">ao botão.</span>
+      </h1>
 
       <div className="hero__bottom hero__bottom--big">
         <p className="hero__lede hero__lede--big">
@@ -264,41 +263,6 @@ function HeroEditorial({ showMarquee }) {
         </div>
       </div>}
     </section>
-  );
-}
-
-function TextRevealWall() {
-  const wallRef = useRef(null);
-  const [isActive, setIsActive] = useState(false);
-
-  const setRevealPosition = (event) => {
-    const rect = wallRef.current?.getBoundingClientRect();
-    if (!rect) return;
-    const position = Math.min(100, Math.max(0, ((event.clientX - rect.left) / rect.width) * 100));
-    wallRef.current.style.setProperty("--reveal-x", `${position}%`);
-  };
-
-  return (
-    <h1
-      ref={wallRef}
-      className={`text-reveal-wall ${isActive ? "text-reveal-wall--active" : ""}`}
-      onPointerEnter={(event) => { setIsActive(true); setRevealPosition(event); }}
-      onPointerMove={setRevealPosition}
-      onPointerLeave={() => setIsActive(false)}
-      onFocus={() => setIsActive(true)}
-      onBlur={() => setIsActive(false)}
-      tabIndex={0}
-      aria-label="Áreas de atuação. Passe o cursor para revelar"
-    >
-      <span className="text-reveal-wall__hint">passe o cursor</span>
-      <span className="text-reveal-wall__beam" aria-hidden="true" />
-      {TEXT_WALL_LINES.map((line, index) => (
-        <span key={line} className="text-reveal-wall__line" style={{ "--line-index": index }}>
-          <span className="text-reveal-wall__outline">{line}</span>
-          <span className="text-reveal-wall__fill" aria-hidden="true">{line}</span>
-        </span>
-      ))}
-    </h1>
   );
 }
 function HeroTerminal({ tz }) {
