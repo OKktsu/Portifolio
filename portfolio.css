@@ -497,12 +497,35 @@ html[data-cursor="custom"] * {
   line-height: 1;
 }
 
+.section--work {
+  position: relative;
+  isolation: isolate;
+  max-width: min(1520px, 100%);
+  overflow: hidden;
+}
+.section--work::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 5% -8% 0;
+  background: radial-gradient(circle at 16% 35%, color-mix(in oklab, var(--accent) 13%, transparent), transparent 38%), radial-gradient(circle at 86% 70%, color-mix(in oklab, #7c5cff 9%, transparent), transparent 34%);
+  filter: blur(16px);
+  pointer-events: none;
+}
+.section--work .section-label {
+  margin-bottom: 34px;
+  border-bottom: 0;
+}
+.section--work .section-label__title { max-width: 760px; }
 /* ---------- PROJECTS ---------- */
 .magnetic-carousel {
   --pointer-x: 0;
   --pointer-y: 0;
-  border-block: 1px solid var(--rule);
-  padding: 28px 0 22px;
+  padding: 24px;
+  border: 1px solid color-mix(in oklab, var(--accent) 18%, var(--rule));
+  border-radius: 28px;
+  background: color-mix(in oklab, var(--bg-2) 84%, transparent);
+  box-shadow: 0 30px 90px color-mix(in oklab, var(--accent) 8%, transparent);
   touch-action: pan-y;
   user-select: none;
 }
@@ -540,15 +563,12 @@ html[data-cursor="custom"] * {
   box-shadow: 0 28px 70px color-mix(in oklab, var(--ink) 24%, transparent);
 }
 .magnetic-card[data-active="true"] .magnetic-card__shade { background: linear-gradient(180deg, rgba(5,7,12,.02) 55%, rgba(5,7,12,.78) 100%); }
-.magnetic-card[data-active="true"] { background-size: contain; background-repeat: no-repeat; }
+.magnetic-card[data-active="true"] { background-size: cover; background-repeat: no-repeat; }
 .magnetic-card__shade { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(5,7,12,.05) 35%, rgba(5,7,12,.9) 100%); }
 .magnetic-card__number { position: absolute; top: 18px; left: 18px; z-index: 1; font-family: var(--mono); font-size: 11px; letter-spacing: .14em; opacity: .78; }
 .magnetic-card__featured {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  z-index: 2;
-  padding: 7px 11px;
+  flex: 0 0 auto;
+  padding: 6px 9px;
   border: 1px solid rgba(255,255,255,.25);
   border-radius: 999px;
   background: color-mix(in oklab, var(--accent) 82%, transparent);
@@ -560,20 +580,7 @@ html[data-cursor="custom"] * {
   text-transform: uppercase;
   backdrop-filter: blur(10px);
 }
-.featured-pill {
-  display: inline-flex;
-  width: max-content;
-  margin-bottom: 10px;
-  padding: 5px 9px;
-  border-radius: 999px;
-  background: var(--accent);
-  color: #fff;
-  font-family: var(--mono);
-  font-size: 9px;
-  font-weight: 700;
-  letter-spacing: .1em;
-  text-transform: uppercase;
-}
+.magnetic-card__title-row { display: flex; align-items: center; gap: 10px; min-width: 0; }
 .magnetic-card__label { position: absolute; right: 16px; bottom: 18px; left: 16px; z-index: 1; display: grid; gap: 5px; transform-origin: left bottom; }
 .magnetic-card__label strong { font-size: clamp(17px, 2vw, 28px); font-weight: 500; letter-spacing: -.025em; white-space: nowrap; }
 .magnetic-card__label small { font-family: var(--mono); font-size: 10px; letter-spacing: .08em; text-transform: uppercase; opacity: .72; }
@@ -591,7 +598,7 @@ html[data-cursor="custom"] * {
 .carousel-dot[data-active="true"] { width: 26px; background: var(--accent); }
 
 @media (max-width: 760px) {
-  .magnetic-carousel { padding-top: 16px; }
+  .magnetic-carousel { padding: 12px; border-radius: 20px; }
   .magnetic-carousel__stage { height: 390px; gap: 0; overflow: visible; }
   .magnetic-card { display: none; min-width: 100%; }
   .magnetic-card[data-active="true"] { display: block; flex: 1; transform: none; }
@@ -953,7 +960,7 @@ html[data-cursor="custom"] * {
   background-position: center;
   border-bottom: 1px solid var(--rule);
 }
-.modal__media[data-featured="true"] { background-size: contain; background-repeat: no-repeat; background-color: #0d0f14; }
+.modal__media[data-featured="true"] { background-size: cover; background-repeat: no-repeat; background-color: #0d0f14; }
 .modal__media::after {
   content: ""; position: absolute; inset: 0;
   background: linear-gradient(180deg, transparent 50%, color-mix(in oklab, var(--ink) 60%, transparent));
