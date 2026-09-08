@@ -341,18 +341,118 @@ function SectionLabel({ num, title, kicker }) {
 }
 
 function ProjectsGrid({ onOpen, density }) {
+  const [active, setActive] = useState(0);
+  const carouselRef = useRef(null);
+  const dragStartRef = useRef(null);
+  const draggedRef = useRef(false);
+  const total = PROJECTS.length;
+  const select = (index) => setActive((index + total) % total);
+
+  const handlePointerMove = (event) => {
+    const el = carouselRef.current;
+    if (!el || event.pointerType === "touch") return;
+    const rect = el.getBoundingClientRect();
+    el.style.setProperty("--pointer-x", `${((event.clientX - rect.left) / rect.width - 0.5) * 2}`);
+    el.style.setProperty("--pointer-y", `${((event.clientY - rect.top) / rect.height - 0.5) * 2}`);
+  };
+
   return (
     <section id="work" className="section">
       <SectionLabel num="01" kicker="Selected work" title="Projetos em destaque" />
-      <ul className={`projects projects--${density}`}>
-        {PROJECTS.map((p, i) => (
-          <ProjectRow key={p.id} p={p} i={i} onOpen={onOpen} />
-        ))}
-      </ul>
+      <div
+        ref={carouselRef}
+        className={`magnetic-carousel projects--${density}`}
+        onPointerMove={handlePointerMove}
+        onPointerLeave={() => {
+          carouselRef.current?.style.setProperty("--pointer-x", "0");
+          carouselRef.current?.style.setProperty("--pointer-y", "0");
+        }}
+        onPointerDown={(event) => {
+          dragStartRef.current = event.clientX;
+          draggedRef.current = false;
+        }}
+        onPointerUp={(event) => {
+          if (dragStartRef.current === null) return;
+          const distance = event.clientX - dragStartRef.current;
+          if (Math.abs(distance) > 45) {
+            draggedRef.current = true;
+            select(active + (distance < 0 ? 1 : -1));
+          }
+          dragStartRef.current = null;
+        }}
+        onPointerCancel={() => { dragStartRef.current = null; }}
+        onKeyDown={(event) => {
+          if (event.key === "ArrowRight") select(active + 1);
+          if (event.key === "ArrowLeft") select(active - 1);
+        }}
+        role="region"
+        aria-roledescription="carrossel"
+        aria-label="Projetos em destaque"
+      >
+        <div className="magnetic-carousel__stage">
+          {PROJECTS.map((project, index) => (
+            <button
+              key={project.id}
+              className="magnetic-card"
+              data-active={index === active}
+              style={{
+                "--distance": index - active,
+                backgroundImage: project.img ? `url(${project.img})` : project.cover
+              }}
+              onMouseEnter={() => setActive(index)}
+              onFocus={() => setActive(index)}
+              onClick={() => {
+                if (draggedRef.current) {
+                  draggedRef.current = false;
+                  return;
+                }
+                if (index === active) onOpen(project);
+                else setActive(index);
+              }}
+              aria-label={`${project.title}: ${project.subtitle}. ${index === active ? "Abrir detalhes" : "Selecionar projeto"}`}
+              aria-current={index === active ? "true" : undefined}
+            >
+              <span className="magnetic-card__shade" />
+              <span className="magnetic-card__number">{project.num}</span>
+              <span className="magnetic-card__label">
+                <strong>{project.title}</strong>
+                <small>{project.role}</small>
+              </span>
+            </button>
+          ))}
+        </div>
+
+        <div className="magnetic-carousel__footer" aria-live="polite">
+          <div className="magnetic-carousel__copy">
+            <span className="kicker">{PROJECTS[active].subtitle}</span>
+            <p>{PROJECTS[active].desc}</p>
+            <div className="magnetic-carousel__tags">
+              {PROJECTS[active].tags.map((tag) => <span key={tag} className="tag">{tag}</span>)}
+            </div>
+          </div>
+          <div className="magnetic-carousel__controls">
+            <button className="carousel-arrow" onClick={() => select(active - 1)} aria-label="Projeto anterior">&larr;</button>
+            <span className="carousel-count">{String(active + 1).padStart(2, "0")} / {String(total).padStart(2, "0")}</span>
+            <button className="carousel-arrow" onClick={() => select(active + 1)} aria-label={"Pr\u00f3ximo projeto"}>&rarr;</button>
+          </div>
+        </div>
+
+        <div className="magnetic-carousel__dots" aria-label="Selecionar projeto">
+          {PROJECTS.map((project, index) => (
+            <button
+              key={project.id}
+              className="carousel-dot"
+              data-active={index === active}
+              onClick={() => select(index)}
+              aria-label={`Mostrar ${project.title}`}
+              aria-current={index === active ? "true" : undefined}
+            />
+          ))}
+        </div>
+      </div>
     </section>
   );
 }
-
 function ProjectRow({ p, i, onOpen }) {
   const [ref, shown] = useReveal();
   const [hover, setHover] = useState(false);

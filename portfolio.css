@@ -1,5 +1,5 @@
 /* ======================================================
-   Marcelo Luan — portfolio
+   Marcelo Luan - portfolio
    editorial / craft-forward
    ====================================================== */
 
@@ -498,6 +498,79 @@ html[data-cursor="custom"] * {
 }
 
 /* ---------- PROJECTS ---------- */
+.magnetic-carousel {
+  --pointer-x: 0;
+  --pointer-y: 0;
+  border-block: 1px solid var(--rule);
+  padding: 28px 0 22px;
+  touch-action: pan-y;
+  user-select: none;
+}
+.magnetic-carousel__stage {
+  display: flex;
+  align-items: stretch;
+  gap: 10px;
+  height: clamp(320px, 44vw, 520px);
+  perspective: 1200px;
+  overflow: hidden;
+}
+.magnetic-card {
+  position: relative;
+  flex: .68 1 0;
+  min-width: 58px;
+  overflow: hidden;
+  border: 1px solid color-mix(in oklab, var(--rule) 72%, white);
+  border-radius: 18px;
+  padding: 0;
+  background-color: var(--bg-2);
+  background-position: center;
+  background-size: cover;
+  color: #fff;
+  cursor: pointer;
+  text-align: left;
+  transform: translate(calc(var(--pointer-x) * var(--distance) * -2px), calc(var(--pointer-y) * var(--distance) * -2px)) rotateY(calc(var(--pointer-x) * var(--distance) * -0.6deg));
+  transition: flex .65s cubic-bezier(.16,1,.3,1), transform .3s ease, filter .45s ease, border-color .3s ease;
+  filter: saturate(.62) brightness(.62);
+}
+.magnetic-card[data-active="true"] {
+  flex: 4.4 1 0;
+  filter: saturate(1) brightness(1);
+  border-color: color-mix(in oklab, var(--accent) 62%, white);
+  transform: translate(calc(var(--pointer-x) * 7px), calc(var(--pointer-y) * 7px)) rotateX(calc(var(--pointer-y) * -1deg)) rotateY(calc(var(--pointer-x) * 1deg));
+  box-shadow: 0 28px 70px color-mix(in oklab, var(--ink) 24%, transparent);
+}
+.magnetic-card__shade { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(5,7,12,.05) 35%, rgba(5,7,12,.9) 100%); }
+.magnetic-card__number { position: absolute; top: 18px; left: 18px; z-index: 1; font-family: var(--mono); font-size: 11px; letter-spacing: .14em; opacity: .78; }
+.magnetic-card__label { position: absolute; right: 16px; bottom: 18px; left: 16px; z-index: 1; display: grid; gap: 5px; transform-origin: left bottom; }
+.magnetic-card__label strong { font-size: clamp(17px, 2vw, 28px); font-weight: 500; letter-spacing: -.025em; white-space: nowrap; }
+.magnetic-card__label small { font-family: var(--mono); font-size: 10px; letter-spacing: .08em; text-transform: uppercase; opacity: .72; }
+.magnetic-card:not([data-active="true"]) .magnetic-card__label { transform: rotate(-90deg) translateY(100%); }
+.magnetic-carousel__footer { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 30px; align-items: end; padding-top: 24px; }
+.magnetic-carousel__copy { max-width: 760px; }
+.magnetic-carousel__copy p { margin: 0 0 16px; color: var(--ink-2); line-height: 1.65; }
+.magnetic-carousel__tags { display: flex; gap: 6px; flex-wrap: wrap; }
+.magnetic-carousel__controls { display: flex; align-items: center; gap: 10px; }
+.carousel-arrow { width: 44px; height: 44px; border: 1px solid var(--rule); border-radius: 50%; background: transparent; color: var(--ink); font-size: 18px; cursor: pointer; transition: color .2s, background .2s, border-color .2s, transform .2s; }
+.carousel-arrow:hover { color: #fff; background: var(--accent); border-color: var(--accent); transform: scale(1.06); }
+.carousel-count { min-width: 54px; text-align: center; font-family: var(--mono); font-size: 11px; color: var(--ink-3); }
+.magnetic-carousel__dots { display: none; justify-content: center; gap: 7px; padding-top: 18px; }
+.carousel-dot { width: 7px; height: 7px; border: 0; border-radius: 999px; padding: 0; background: var(--rule); cursor: pointer; transition: width .25s, background .25s; }
+.carousel-dot[data-active="true"] { width: 26px; background: var(--accent); }
+
+@media (max-width: 760px) {
+  .magnetic-carousel { padding-top: 16px; }
+  .magnetic-carousel__stage { height: 390px; gap: 0; overflow: visible; }
+  .magnetic-card { display: none; min-width: 100%; }
+  .magnetic-card[data-active="true"] { display: block; flex: 1; transform: none; }
+  .magnetic-carousel__footer { grid-template-columns: 1fr; gap: 18px; }
+  .magnetic-carousel__controls { justify-content: space-between; }
+  .magnetic-carousel__dots { display: flex; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .magnetic-card { transform: none !important; transition: none; }
+}
+
 .projects { list-style: none; padding: 0; margin: 0; }
 .project {
   position: relative;
