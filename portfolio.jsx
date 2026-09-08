@@ -4,6 +4,8 @@ import "./portfolio.css";
 
 const CV_URL = `${import.meta.env.BASE_URL}curriculo-marcelo-luan.pdf`;
 
+const TEXT_WALL_WORDS = ["FULL-STACK", "ARQUITETURA", "INTERFACES", "BACKEND", "DADOS", "PRODUTO", "REACT", "NODE.JS", "POSTGRESQL", "PERFORMANCE", "CLEAN CODE", "ENTREGA"];
+
 // ---------- DATA ----------
 const PROJECTS = [
   {
@@ -238,6 +240,8 @@ function HeroEditorial({ showMarquee }) {
         <span className="hero__line hero__line--accent">ao botão.</span>
       </h1>
 
+      <TextRevealWall />
+
       <div className="hero__bottom hero__bottom--big">
         <p className="hero__lede hero__lede--big">
           Marcelo Luan — desenvolvedor full-stack em Curitiba. Angular, .NET e experiência modernizando sistemas para ganhar performance, escala e manutenção.
@@ -265,6 +269,24 @@ function HeroEditorial({ showMarquee }) {
   );
 }
 
+function TextRevealWall() {
+  const [revealed, setRevealed] = useState(false);
+  return (
+    <div
+      className={`text-reveal-wall ${revealed ? "text-reveal-wall--revealed" : ""}`}
+      onMouseEnter={() => setRevealed(true)}
+      onMouseLeave={() => setRevealed(false)}
+      onFocus={() => setRevealed(true)}
+      onBlur={() => setRevealed(false)}
+      tabIndex={0}
+      aria-label="Áreas de atuação"
+    >
+      {TEXT_WALL_WORDS.map((word, index) => (
+        <span key={word} className="text-reveal-wall__word" style={{ "--word-index": index }}>{word}</span>
+      ))}
+    </div>
+  );
+}
 function HeroTerminal({ tz }) {
   const lines = [
     { p: "marcelo@portfolio", c: "~", cmd: "whoami" },
@@ -587,28 +609,44 @@ function About() {
 }
 
 function Stack() {
+  const skills = SKILLS.flatMap((group) => group.items.map((name) => ({ name, group: group.group })));
+  const [activeIndex, setActiveIndex] = useState(0);
+  const activeSkill = skills[activeIndex];
+
   return (
     <section id="stack" className="section">
       <SectionLabel num="03" kicker="Tech stack" title="Ferramentas em rotação." />
-      <div className="stack">
-        {SKILLS.map((skillGroup, gi) => (
-          <Reveal key={skillGroup.group} className="stack__group" delay={gi * 100}>
-            <h3 className="stack__group-title"><span className="meta-key">{String(gi + 1).padStart(2, "0")}</span>{skillGroup.group}</h3>
-            <ul className="stack__list">
-              {skillGroup.items.map((skill) => (
-                <li key={skill} className="skill">
-                  <span className="skill__mark" aria-hidden="true">→</span>
-                  <span className="skill__name">{skill}</span>
-                </li>
-              ))}
-            </ul>
-          </Reveal>
-        ))}
+      <div className="interactive-skill-grid">
+        <div className="interactive-skill-grid__head">
+          <span className="meta-key">explore a grade</span>
+          <span>Passe o cursor ou selecione uma tecnologia.</span>
+        </div>
+        <div className="interactive-skill-grid__cells" role="grid" aria-label="Tecnologias e ferramentas">
+          {skills.map((skill, index) => (
+            <button
+              key={skill.name}
+              type="button"
+              className="interactive-skill-grid__cell"
+              data-active={index === activeIndex}
+              onMouseEnter={() => setActiveIndex(index)}
+              onFocus={() => setActiveIndex(index)}
+              onClick={() => setActiveIndex(index)}
+              aria-pressed={index === activeIndex}
+            >
+              <span>{skill.name}</span>
+              <small>{skill.group}</small>
+            </button>
+          ))}
+        </div>
+        <div className="interactive-skill-grid__active" aria-live="polite">
+          <span className="meta-key">em foco</span>
+          <strong>{activeSkill.name}</strong>
+          <span>{activeSkill.group}</span>
+        </div>
       </div>
     </section>
   );
 }
-
 function Contact() {
   const [copied, setCopied] = useState("");
   const copy = (label, value) => {
