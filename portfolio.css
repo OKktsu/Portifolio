@@ -794,7 +794,6 @@ html[data-cursor="custom"] * {
   margin: 0 0 24px;
   text-wrap: pretty;
 }
-.about__lede p:nth-child(2) { color: var(--ink-2); font-size: clamp(17px, 1.3vw, 19px); }
 
 .timeline { position: relative; display: flex; flex-direction: column; gap: 40px; padding-left: 28px; }
 .timeline::before {
