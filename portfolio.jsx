@@ -564,6 +564,9 @@ function About() {
           <p>
             Aplico Clean Code e SOLID para tornar módulos mais fáceis de manter, otimizo consultas em SQL Server e busco performance no front-end. Curso ADS na PUCPR e também sou técnico em Mecatrônica pelo SENAI.
           </p>
+          <p>
+            Também utilizo ferramentas de IA como Codex, Claude Code e Kimi K3 no fluxo de desenvolvimento para acelerar investigação, prototipação, debugging e documentação. Uso esses recursos como apoio técnico, mantendo validação, decisões de arquitetura e qualidade do código sob minha responsabilidade.
+          </p>
         </Reveal>
         <div className="timeline">
           {EXPERIENCE.map((e, i) => (
