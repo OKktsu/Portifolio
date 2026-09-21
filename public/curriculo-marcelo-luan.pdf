@@ -1,122 +1,500 @@
 %PDF-1.4
-%“Œ‹ž ReportLab Generated PDF document (opensource)
+%âãÏÓ
 1 0 obj
 <<
-/F1 2 0 R /F2 3 0 R
+/Producer (pypdf)
 >>
 endobj
 2 0 obj
 <<
-/BaseFont /Helvetica /Encoding /WinAnsiEncoding /Name /F1 /Subtype /Type1 /Type /Font
+/Type /Pages
+/Count 1
+/Kids [ 4 0 R ]
 >>
 endobj
 3 0 obj
 <<
-/BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding /Name /F2 /Subtype /Type1 /Type /Font
+/Type /Catalog
+/Pages 2 0 R
 >>
 endobj
 4 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://www.linkedin.com/in/marceloluanp/)
->> /Border [ 0 0 0 ] /Rect [ 290.3983 743.0101 319.8823 752.3701 ] /Subtype /Link /Type /Annot
+/Annots [ 5 0 R 6 0 R 7 0 R 8 0 R 9 0 R 10 0 R ]
+/Contents 11 0 R
+/MediaBox [ 0 0 595.2756 841.8898 ]
+/Resources <<
+/Font <<
+/F1 12 0 R
+/F1-0 13 0 R
+/F2 14 0 R
+>>
+/ProcSet [ /ImageB /ImageC /ImageI /PDF /Text ]
+>>
+/Rotate 0
+/Trans <<
+>>
+/Type /Page
+/Parent 2 0 R
 >>
 endobj
 5 0 obj
 <<
 /A <<
-/S /URI /Type /Action /URI (https://github.com/OKktsu)
->> /Border [ 0 0 0 ] /Rect [ 326.2471 743.0101 350.5207 752.3701 ] /Subtype /Link /Type /Annot
+/S /URI
+/Type /Action
+/URI (https\072\057\057www\056linkedin\056com\057in\057marceloluanp\057)
+>>
+/Border [ 0 0 0 ]
+/Rect [ 290.3983 743.0101 319.8823 752.3701 ]
+/Subtype /Link
+/Type /Annot
 >>
 endobj
 6 0 obj
 <<
 /A <<
-/S /URI /Type /Action /URI (https://portifolio-two-delta-16.vercel.app)
->> /Border [ 0 0 0 ] /Rect [ 356.8855 743.0101 385.4959 752.3701 ] /Subtype /Link /Type /Annot
+/S /URI
+/Type /Action
+/URI (https\072\057\057github\056com\057OKktsu)
+>>
+/Border [ 0 0 0 ]
+/Rect [ 326.2471 743.0101 350.5207 752.3701 ]
+/Subtype /Link
+/Type /Annot
 >>
 endobj
 7 0 obj
 <<
 /A <<
-/S /URI /Type /Action /URI (https://frontend-beta-kohl-59.vercel.app/)
->> /Border [ 0 0 0 ] /Rect [ 62.69291 442.9001 146.0285 452.3201 ] /Subtype /Link /Type /Annot
+/S /URI
+/Type /Action
+/URI (https\072\057\057portifolio\055two\055delta\05516\056vercel\056app)
+>>
+/Border [ 0 0 0 ]
+/Rect [ 356.8855 743.0101 385.4959 752.3701 ]
+/Subtype /Link
+/Type /Annot
 >>
 endobj
 8 0 obj
 <<
 /A <<
-/S /URI /Type /Action /URI (https://github.com/OKktsu/Mensagens)
->> /Border [ 0 0 0 ] /Rect [ 152.4341 442.9001 229.6546 452.3201 ] /Subtype /Link /Type /Annot
+/S /URI
+/Type /Action
+/URI (https\072\057\057frontend\055beta\055kohl\05559\056vercel\056app\057)
+>>
+/Border [ 0 0 0 ]
+/Rect [ 62.69291 442.9001 146.0285 452.3201 ]
+/Subtype /Link
+/Type /Annot
 >>
 endobj
 9 0 obj
 <<
 /A <<
-/S /URI /Type /Action /URI (https://github.com/OKktsu/MenuBuilderBack)
->> /Border [ 0 0 0 ] /Rect [ 62.69291 393.2888 139.9134 403.0888 ] /Subtype /Link /Type /Annot
+/S /URI
+/Type /Action
+/URI (https\072\057\057github\056com\057OKktsu\057Mensagens)
+>>
+/Border [ 0 0 0 ]
+/Rect [ 152.4341 442.9001 229.6546 452.3201 ]
+/Subtype /Link
+/Type /Annot
 >>
 endobj
 10 0 obj
 <<
-/Annots [ 4 0 R 5 0 R 6 0 R 7 0 R 8 0 R 9 0 R ] /Contents 14 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 13 0 R /Resources <<
-/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
->> /Rotate 0 
-  /Trans <<
-
->> /Type /Page
+/A <<
+/S /URI
+/Type /Action
+/URI (https\072\057\057github\056com\057OKktsu\057MenuBuilderBack)
+>>
+/Border [ 0 0 0 ]
+/Rect [ 62.69291 393.2888 139.9134 403.0888 ]
+/Subtype /Link
+/Type /Annot
 >>
 endobj
 11 0 obj
 <<
-/PageMode /UseNone /Pages 13 0 R /Type /Catalog
+/Length 7782
 >>
+stream
+q
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+q
+1 0 0 1 62.69291 771.3701 cm
+q
+.090196 .090196 .098039 rg
+BT 1 0 0 1 0 3 Tm /F2 19 Tf 22 TL (Marcelo Luan Pinheiro de Mello) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 756.3701 cm
+q
+.203922 .211765 .231373 rg
+BT 1 0 0 1 0 2.8 Tm /F2 10.2 Tf 13 TL (DESENVOLVEDOR FULL STACK) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 742.1701 cm
+q
+BT 1 0 0 1 0 2.4 Tm 10.2 TL /F1 7.8 Tf .384314 .4 .427451 rg (Curitiba, PR | \(41\) 98482-1419 | marcelo.luan.mello@gmail.com | ) Tj (LinkedIn) Tj ( | ) Tj (GitHub) Tj ( | ) Tj (Portf\363lio) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 740.1701 cm
+Q
+q
+1 0 0 1 62.69291 721.1701 cm
+q
+.203922 .211765 .231373 rg
+BT 1 0 0 1 0 1.8 Tm /F2 9.2 Tf 11 TL (RESUMO PROFISSIONAL) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 716.6701 cm
+q
+.5 w
+1 J
+.85098 .854902 .87451 RG
+n 0 0 m 469.8898 0 l S
+Q
+Q
+q
+1 0 0 1 62.69291 679.3701 cm
+q
+.090196 .090196 .098039 rg
+BT 1 0 0 1 0 24.75 Tm /F1 8.55 Tf 11.1 TL (Desenvolvedor Full Stack J\372nior com experi\352ncia em transformar processos dispersos em solu\347\365es reutiliz\341veis e) Tj T* (escal\341veis. Contribuo da concep\347\343o t\351cnica \340 implementa\347\343o, com foco na moderniza\347\343o de sistemas legados, efici\352ncia) Tj T* (no acesso a dados e qualidade de c\363digo para tornar as entregas mais sustent\341veis para o produto e para o time.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 677.3701 cm
+Q
+q
+1 0 0 1 62.69291 658.3701 cm
+q
+.203922 .211765 .231373 rg
+BT 1 0 0 1 0 1.8 Tm /F2 9.2 Tf 11 TL (EXPERI\312NCIA PROFISSIONAL) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 653.8701 cm
+q
+.5 w
+1 J
+.85098 .854902 .87451 RG
+n 0 0 m 469.8898 0 l S
+Q
+Q
+q
+1 0 0 1 62.69291 638.7701 cm
+q
+.090196 .090196 .098039 rg
+BT 1 0 0 1 0 2 Tm /F2 9.1 Tf 11.1 TL (Faso | Desenvolvedor Full Stack J\372nior) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 628.9701 cm
+q
+.384314 .4 .427451 rg
+BT 1 0 0 1 0 1.95 Tm /F1 7.85 Tf 9.8 TL (fev. 2025 - atual | Curitiba, PR) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 608.0701 cm
+q
+BT 1 0 0 1 0 12.65 Tm /F1 10 Tf 12 TL .090196 .090196 .098039 rg (\177) Tj ET
+.090196 .090196 .098039 rg
+BT 1 0 0 1 8 12.65 Tm /F1 8.25 Tf 10.45 TL 1.5 0 Td (Consolidei cerca de 7 a 8 fluxos de alertas em C# e .NET, substituindo l\363gicas duplicadas por m\351todos curtos, descritivos e) Tj T* -1.5 0 Td (reutiliz\341veis.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 585.1701 cm
+q
+BT 1 0 0 1 0 12.65 Tm /F1 10 Tf 12 TL .090196 .090196 .098039 rg (\177) Tj ET
+.090196 .090196 .098039 rg
+BT 1 0 0 1 8 12.65 Tm /F1 8.25 Tf 10.45 TL 1.5 0 Td (Centralizei a prepara\347\343o e o envio de mensagens via WhatsApp, transformando entidades brutas em notifica\347\365es) Tj T* -1.5 0 Td (padronizadas e facilitando a cria\347\343o de novos alertas.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 562.2701 cm
+q
+BT 1 0 0 1 0 12.65 Tm /F1 10 Tf 12 TL .090196 .090196 .098039 rg (\177) Tj ET
+.090196 .090196 .098039 rg
+BT 1 0 0 1 8 12.65 Tm /F1 8.25 Tf 10.45 TL 1.5 0 Td (Otimizei consultas em MongoDB ao revisar o fluxo de busca e limitar o retorno aos dados necess\341rios, reduzindo) Tj T* -1.5 0 Td (processamento desnecess\341rio nas telas.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 539.3701 cm
+q
+BT 1 0 0 1 0 12.65 Tm /F1 10 Tf 12 TL .090196 .090196 .098039 rg (\177) Tj ET
+.090196 .090196 .098039 rg
+BT 1 0 0 1 8 12.65 Tm /F1 8.25 Tf 10.45 TL 1.5 0 Td (Participei da concep\347\343o de solu\347\365es, da idealiza\347\343o \340 proposta t\351cnica, contribuindo com requisitos, desenho de arquitetura) Tj T* -1.5 0 Td (e constru\347\343o de funcionalidades.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 526.9201 cm
+q
+BT 1 0 0 1 0 2.2 Tm /F1 10 Tf 12 TL .090196 .090196 .098039 rg (\177) Tj ET
+.090196 .090196 .098039 rg
+BT 1 0 0 1 8 2.2 Tm /F1 8.25 Tf 10.45 TL 1.5 0 Td (Atuei em rotinas \341geis com Scrum e Kanban, GitFlow e acompanhamento de entregas no Azure DevOps.) Tj T* -1.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 522.9201 cm
+Q
+q
+1 0 0 1 62.69291 503.9201 cm
+q
+.203922 .211765 .231373 rg
+BT 1 0 0 1 0 1.8 Tm /F2 9.2 Tf 11 TL (PROJETOS EM DESTAQUE) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 499.4201 cm
+q
+.5 w
+1 J
+.85098 .854902 .87451 RG
+n 0 0 m 469.8898 0 l S
+Q
+Q
+q
+1 0 0 1 62.69291 484.3201 cm
+q
+.090196 .090196 .098039 rg
+BT 1 0 0 1 0 2 Tm /F2 9.1 Tf 11.1 TL (Mensagens | Aplica\347\343o full stack de comunica\347\343o) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 474.5201 cm
+q
+.384314 .4 .427451 rg
+BT 1 0 0 1 0 1.95 Tm /F1 7.85 Tf 9.8 TL (React, Node.js e PostgreSQL) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 452.3201 cm
+q
+.090196 .090196 .098039 rg
+BT 1 0 0 1 0 13.65 Tm /F1 8.55 Tf 11.1 TL (Aplica\347\343o de mensagens com interface inspirada em plataformas de comunica\347\343o, criada para estudar arquitetura full) Tj T* (stack, modelagem de dados e integra\347\343o entre front-end e back-end.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 442.5201 cm
+q
+BT 1 0 0 1 0 1.95 Tm 9.8 TL /F1 7.85 Tf .203922 .211765 .231373 rg (Ver aplica\347\343o publicada) Tj .384314 .4 .427451 rg ( | ) Tj .203922 .211765 .231373 rg (Reposit\363rio no GitHub) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 439.5201 cm
+Q
+q
+1 0 0 1 62.69291 438.1201 cm
+q
+.4 w
+1 J
+.85098 .854902 .87451 RG
+n 0 0 m 469.8898 0 l S
+Q
+Q
+q
+1 0 0 1 62.69291 423.0201 cm
+q
+.090196 .090196 .098039 rg
+BT 1 0 0 1 0 2 Tm /F2 9.1 Tf 11.1 TL (MenuBuilder | Plataforma de card\341pios digitais) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 413.2201 cm
+q
+.384314 .4 .427451 rg
+BT 1 0 0 1 0 1.95 Tm /F1 7.85 Tf 9.8 TL (Angular, .NET e SQL Server) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 402.1201 cm
+q
+.090196 .090196 .098039 rg
+BT 1 0 0 1 0 2.55 Tm /F1 8.55 Tf 11.1 TL (Desenvolvimento de funcionalidades e manuten\347\343o de uma plataforma para cria\347\343o e gest\343o de card\341pios digitais.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 392.3201 cm
+q
+.203922 .211765 .231373 rg
+BT 1 0 0 1 0 1.95 Tm /F1 7.85 Tf 9.8 TL (Reposit\363rio no GitHub) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 390.3201 cm
+Q
+q
+1 0 0 1 62.69291 371.3201 cm
+q
+.203922 .211765 .231373 rg
+BT 1 0 0 1 0 1.8 Tm /F2 9.2 Tf 11 TL (COMPET\312NCIAS T\311CNICAS) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 366.8201 cm
+q
+.5 w
+1 J
+.85098 .854902 .87451 RG
+n 0 0 m 469.8898 0 l S
+Q
+Q
+q
+1 0 0 1 62.69291 306.8201 cm
+q
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 0 36 cm
+q
+BT 1 0 0 1 0 12.25 Tm 10 TL /F2 7.75 Tf .090196 .090196 .098039 rg (Front-end) Tj /F1 7.75 Tf  T* (Angular, React, TypeScript, JavaScript, HTML e CSS) Tj T* ET
+Q
+Q
+q
+1 0 0 1 238.1102 36 cm
+q
+BT 1 0 0 1 0 12.25 Tm 10 TL /F2 7.75 Tf .090196 .090196 .098039 rg (Back-end) Tj /F1 7.75 Tf  T* (C#, .NET, Node.js, APIs REST e Prisma) Tj T* ET
+Q
+Q
+q
+1 0 0 1 0 13 cm
+q
+BT 1 0 0 1 0 12.25 Tm 10 TL /F2 7.75 Tf .090196 .090196 .098039 rg (Dados) Tj /F1 7.75 Tf  T* (SQL Server, PostgreSQL, MongoDB e Oracle) Tj T* ET
+Q
+Q
+q
+1 0 0 1 238.1102 3 cm
+q
+BT 1 0 0 1 0 22.25 Tm 10 TL /F2 7.75 Tf .090196 .090196 .098039 rg (Pr\341ticas e ferramentas) Tj /F1 7.75 Tf  T* (Clean Code, SOLID, Git, GitFlow, Docker, Azure DevOps, Scrum e) Tj T* (Kanban) Tj T* ET
+Q
+Q
+q
+Q
+Q
+Q
+q
+1 0 0 1 62.69291 304.8201 cm
+Q
+q
+1 0 0 1 62.69291 285.8201 cm
+q
+.203922 .211765 .231373 rg
+BT 1 0 0 1 0 1.8 Tm /F2 9.2 Tf 11 TL (FORMA\307\303O) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 281.3201 cm
+q
+.5 w
+1 J
+.85098 .854902 .87451 RG
+n 0 0 m 469.8898 0 l S
+Q
+Q
+q
+1 0 0 1 62.69291 266.2201 cm
+q
+.090196 .090196 .098039 rg
+BT 1 0 0 1 0 2.55 Tm /F1 8.55 Tf 11.1 TL (An\341lise e Desenvolvimento de Sistemas - PUCPR | 2024 - 2026 \(em andamento\)) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 255.1201 cm
+q
+.090196 .090196 .098039 rg
+BT 1 0 0 1 0 2.55 Tm /F1 8.55 Tf 11.1 TL (T\351cnico em Mecatr\364nica - SENAI | conclu\355do) Tj T* ET
+Q
+Q
+ 
+
+Q
+
+q
+0.0 0.0 595.2756 841.8898 re
+W
+n
+1 0 0 1 0 0 cm
+BT
+/F1-0 12 Tf
+14.4 TL
+ET
+1 1 1 rg
+n
+55 738 500 20 re
+f*
+0.384314 0.4 0.427451 rg
+BT
+/F1-0 7.8 Tf
+9.36 TL
+ET
+BT
+1 0 0 1 56.7 747.2 Tm
+(Curitiba\054 PR \174 \05041\051 98482\0551419 \174 marcelo\056luan\056dev\100gmail\056com    \174 LinkedIn \174 GitHub \174 Portf\363lio) Tj
+T*
+ET
+Q
+
+
+endstream
 endobj
 12 0 obj
 <<
-/Author (Marcelo Luan Pinheiro de Mello) /CreationDate (D:20260920232153-03'00') /Creator (\(unspecified\)) /Keywords () /ModDate (D:20260920232153-03'00') /Producer (ReportLab PDF Library - \(opensource\)) 
-  /Subject (\(unspecified\)) /Title (Curr\355culo - Marcelo Luan Pinheiro de Mello) /Trapped /False
+/BaseFont /Helvetica
+/Encoding /WinAnsiEncoding
+/Name /F1
+/Subtype /Type1
+/Type /Font
 >>
 endobj
 13 0 obj
 <<
-/Count 1 /Kids [ 10 0 R ] /Type /Pages
+/BaseFont /Helvetica
+/Encoding /WinAnsiEncoding
+/Name /F1
+/Subtype /Type1
+/Type /Font
 >>
 endobj
 14 0 obj
 <<
-/Filter [ /ASCII85Decode /FlateDecode ] /Length 2554
+/BaseFont /Helvetica-Bold
+/Encoding /WinAnsiEncoding
+/Name /F2
+/Subtype /Type1
+/Type /Font
 >>
-stream
-Gb!;e;0V$.&q801Qui+em3030CkI!`91YO($#F#Dh?R@$>HmB2b:CcCc.O2rOUT6+PIN&g:OA6<N%I\tDs$q/7Np^L&$^VZ28Is,r9&e7TeKgTnJr_6@i3HD^0Hcea=_VHIG-'qlOh2'\HLg-a,\nu8\YY@cd;@]TN2jg-`NF%@(sW,.$2/GJl8qjjW.83:F(l,QGQUsT=@]1@LdTE8`UhXrrVf\N?.KXVob6t>IT=GauH^p$0cR7r:GfsoDW8.Fi)9>f."2q=aR;AZdJ`lanXo[HL_%p+3%fXbm2.Y>?Kl`LK'QZ/a&Vbb,*)nkFSqd$'#hu*q@'$^U3//"Drk9@A/>iO/rH4#P\Xa9:mcl5X4m.H:<2an11S5i1'q$F4LPs+'*/(&griXHu/2`*/jGFO)NM<>BTg5TmnO5O)@^hd`[?rob,XVGMfNGgH:"L)B<T76hZQ)DuE#(?QM\C%sJ\?@rcWPS)$j-#NHRhP-39igCV0(39K%N'*];KJ006t7@QW%qnnI2WL[E+I^ed!+V&K8J_@$U]=n1oBL%!D(R07l&3<*RDUKuCH-LE%DIg'3YuG[@,e1R#d:[^5n9Qo+GglGSs-@XN(1'8T82/t;d#+[q;CW(_aHVX.T$&*_OlJ]JKgTmK'FW7UToT;IKAqS#M0QmAAA\Q\f`?E@o8"^)q[O$GWg.f[OI$BB:EuHroD"m[NE2,h'bLP\iIY0E$"*:'ZYE1Sg:WZ4KTs;V`a#A"C&cu84VtZkCR.?)="KY_#P_1beJ9[a;@1Qb%N&@_S"7B^JgCK5E&1@%69#`2#oQYMZrAJ@JeOnN$Ko]s3OmbT_"CT2D;Gbg#.h=k&guMlcsk7jQQrWelW(4:4<Oo:Ti3?'0`'[KoPhG3#e_>:%fRY(\q,Vks3569Khh*?dpg'fEkmJML;*Wo0,(,"^1lg'pQd[.mkOb=MQ/)WQE#An'!uGr2\&ZN#&j`>@g&NgFkLY@NZ1#sF2B%ZVHTCt((crr:;[C)$e"@o<H6-(Y_RuAKao]baE@ErX@=m%E:FbYP"\_:7*Gg&>Tq^]Bg&8"#g9%=bpX#+Q>i[gQ($ZUa<9Yp2")R7*cioT+jsIZ@`Z)HXhYa1/A[5]0/N7ag;o)9L<rekZk7g*A]Wf?OYq!eg=p^#?nH%1KYaW-rQg,O#Smd%'4T6`R(-"h]k2:!-Y.n7lA9hVZPEIj%AndXIUY>[A6Ggr'b'puTp<_>*`]K<<%>:@Tk4,>d"$5X@O7"E)fK^uZ3YI%G"t^:8fUHK.ZMKWdEol^GX_WY:75KRYTCV;Ql!j[`&jBijRl_b'!pjmjHsms8IU6l@tEkY@8$)iD'(3EdLq.ELguWNb"YbiOfX4mIDt7+a\\kV)eF>.-HV\[nq38``TEh=dLLT,?GcWHTq=*:Yp.7#r.ZuFPRn)m9ui2Z_(lG!`M]h8&A_'&Ram93;koRWNYO$BYUKLI&@pG-&PkXEAXL?hRd3;F#3TqE)-Ra[VC`0,@V!&%;d+I$G+Cf[d7r!fLL4f>4QD]X0$kc_!JNjL6I1>Db#D=E_HEZAXB+:mQ9MU]"5%kR,k>$L_shZcdSEjWn*;bT`o*gm*-;*kP3p*>U\l*J[">E*JEta)rS)H3(1-H!o>qD1GCZgUI.7-Qk[irRrB?Mehl6\J6f7Ftfa=sq.^seZJ^)mFcsE/%/@Tbh.D=iS8F+T++OTeOJ=`_cHf-I'*Os,o_th7sW[X*YV>0D*Mk\i7kUTIShLTnlF`YTB*Frp&&!:V00V*6sato_F_&=q;$.I+qmCX%_N_R)Eei"s>f0sM%S@pUZa&G3cF\p+:?4!dJ2KS;4-Y(!XTWTt*KI,c-IDsYPLHOSNk-B\Uq*(pkZdEbsB@Zs)RY>_VOlOHA@*FMKZ?3GXSN&shSSL>Hq#eYo+LERiD<@'Z3uN<mUR4#nkB+_a/r8l3aZhT#WTUd(V0MO=&.(8W#hu_D4r\lC`CA<4@F#Tf=Mfm,"[L-;H7iY;dT)D`eZg\07O/TbAmB1tMl+gEC#'A<Ts@XHl&\A6am1@kUQ&Ar(Rh6,j=_(m4h")X*gY+l<_2E=KgtQ9n.6hY/nV5lgiM3G>,lgq\$DiUJ2p@g?V2A7m\ZcTmV$,8k)p/ADhisJ$Y-eS-i@SEflQJc]Cp6TYN'*[i8EE[Z^NCd)O0F-V4pl[>-CoTB558PS[;TX8mdp'fjms"D4=8_^LnP030E1m418S0l_!<`@gpuJlnk`lBHTURc>!:4D)Q.;Ie[2]Hg\,?!]i$&hWF<X[@&HLPfVJCUqnCMT?kr$P@C$+g^@5^<hsi;7ZtYWYpeQ_TP\ET?>&_+)6)$WF9WJ>.qOW[G%)!"KX2AI#]g5_PO\%J/ao_Y^B<(CqJ8&l0BP@.QCo^&b1>KH)h!4)6[m"J`W7n)l4j60EcNs]\/Qt](BrOc-8-kT%1gtTbR-[6TBLR,ftcYsP)()^0PF!oZe`b$'hgh#mJir[97?_q+'huR@R8,a\8:4ADd"7t"R"(Oo3EFkm;WPqR)WP%qY&eZ="kTL%rTd4F(et,#_F0_mS2X!%s,67)u~>endstream
 endobj
 xref
 0 15
 0000000000 65535 f 
-0000000061 00000 n 
-0000000102 00000 n 
-0000000209 00000 n 
-0000000321 00000 n 
-0000000514 00000 n 
-0000000691 00000 n 
-0000000885 00000 n 
-0000001078 00000 n 
-0000001265 00000 n 
-0000001458 00000 n 
-0000001712 00000 n 
-0000001782 00000 n 
-0000002112 00000 n 
-0000002173 00000 n 
+0000000015 00000 n 
+0000000054 00000 n 
+0000000113 00000 n 
+0000000162 00000 n 
+0000000446 00000 n 
+0000000663 00000 n 
+0000000855 00000 n 
+0000001073 00000 n 
+0000001293 00000 n 
+0000001498 00000 n 
+0000001710 00000 n 
+0000009545 00000 n 
+0000009653 00000 n 
+0000009761 00000 n 
 trailer
 <<
-/ID 
-[<39199011fa07be932e6a4c6998cc3ea9><39199011fa07be932e6a4c6998cc3ea9>]
-% ReportLab generated PDF document -- digest (opensource)
-
-/Info 12 0 R
-/Root 11 0 R
 /Size 15
+/Root 3 0 R
+/Info 1 0 R
 >>
 startxref
-4819
+9874
 %%EOF
