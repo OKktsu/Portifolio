@@ -43,7 +43,9 @@ pnpm run preview
 
 ## Publicação
 
-O projeto usa caminhos relativos para funcionar na Vercel, na Netlify e no GitHub Pages em `/Portifolio/`. O workflow em `.github/workflows/deploy.yml` publica automaticamente a versão de produção quando há um push na branch `main`.
+O site principal é https://portifolio-two-delta-16.vercel.app/ e a integração da Vercel publica os pushes na branch `main`.
+
+O projeto usa caminhos relativos, compatíveis também com Netlify e GitHub Pages em `/Portifolio/`. O workflow em `.github/workflows/deploy.yml` é uma alternativa para Pages e exige que esse serviço esteja habilitado e configurado para GitHub Actions no repositório. Uma falha nessa alternativa não impede o deploy independente na Vercel.
 
 ## Contato
 
