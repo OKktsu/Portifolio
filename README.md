@@ -10,6 +10,9 @@ Portfólio profissional de Marcelo Luan, desenvolvedor full-stack com foco em An
 - Navegação e modais acessíveis por teclado
 - Metadados para SEO e compartilhamento em redes sociais
 - Build otimizado com React e Vite
+- AgendaPro com multitenancy, lembretes em Redis/BullMQ e testes com infraestrutura real
+- Menu móvel, controles de projetos por toque e download do currículo atualizado
+- Contato principal direto pelo WhatsApp, com e-mail como alternativa
 
 ## Executar localmente
 
@@ -46,4 +49,11 @@ O projeto usa caminhos relativos para funcionar na Vercel, na Netlify e no GitHu
 
 - [LinkedIn](https://www.linkedin.com/in/marcelo-luan/)
 - [GitHub](https://github.com/OKktsu)
-- [E-mail](mailto:marceloluan125@gmail.com)
+- [WhatsApp](https://wa.me/5541984821419)
+- [E-mail](mailto:marcelo.luan.dev@gmail.com)
+
+## Atualizar o currículo
+
+Com Python e ReportLab disponíveis, execute `python scripts/build_resume.py`.
+O script gera o PDF em `output/pdf/` e atualiza a cópia pública usada no download.
+As versões anteriores, relatórios e capturas locais em `output/` e `tmp/` não são publicados pelo Git.

@@ -2,7 +2,9 @@ import React, { useState, useEffect, useRef } from "react";
 import { createRoot } from "react-dom/client";
 import "./portfolio.css";
 
-const CV_URL = `${import.meta.env.BASE_URL}curriculo-marcelo-luan.pdf`;
+const CV_URL = `${import.meta.env.BASE_URL}curriculo-marcelo-luan.pdf?v=2026-10-15`;
+const CONTACT_EMAIL = "marcelo.luan.dev@gmail.com";
+const WHATSAPP_URL = "https://wa.me/5541984821419";
 
 
 // ---------- DATA ----------
@@ -17,13 +19,36 @@ const PROJECTS = [
     status: "Em desenvolvimento",
     img: "img/mensagens-chat.png",
     link: "https://frontend-beta-kohl-59.vercel.app/",
+    repo: "https://github.com/OKktsu/Mensagens",
     role: "Full-stack",
     year: "2026—",
     featured: true
   },
   {
-    id: "menubuilder",
+    id: "agendapro",
     num: "02",
+    title: "AgendaPro",
+    subtitle: "Reservas, isolamento de dados e processamento assíncrono",
+    desc: "Plataforma de agendamento com React, Node.js e PostgreSQL. A evolução do projeto reúne isolamento por empresa, proteção contra reservas sobrepostas e lembretes em fila com Redis e BullMQ. Testes de integração com PostgreSQL e Redis reais exercitam isolamento, transações e recuperação de falhas na CI.",
+    tags: ["React", "Node.js", "TypeScript", "Fastify", "PostgreSQL", "Prisma", "Redis", "BullMQ", "Vitest", "GitHub Actions"],
+    status: "Em desenvolvimento",
+    cover: "linear-gradient(135deg, #1c242b, #101114)",
+    link: "https://github.com/OKktsu/AgendaPro",
+    repo: "https://github.com/OKktsu/AgendaPro",
+    linkLabel: "Ver repositório",
+    role: "Full-stack · arquitetura e qualidade",
+    highlights: [
+      { title: "Dados isolados por empresa", text: "Modo dedicado com uma base de identidade e bancos por empresa, vínculos e permissões por organização. A troca de empresa descarta respostas e estados da sessão anterior." },
+      { title: "Integridade no PostgreSQL", text: "Constraint de exclusão impede horários sobrepostos. Testes com bancos reais validam restrições e isolamento entre empresas." },
+      { title: "Lembretes fora da requisição", text: "Reserva e outbox são gravados na mesma transação. Dispatcher e worker independentes usam Redis/BullMQ, com retentativas e processamento idempotente do registro no banco." },
+      { title: "Falhas testadas na CI", text: "GitHub Actions executa formatação, lint, testes e build, além de laboratórios com PostgreSQL e Redis: rollback, duplicação, cancelamento, reinícios e recuperação da fila." }
+    ],
+    note: "Os lembretes ainda têm processamento simulado, sem envio de e-mail ou WhatsApp. O workflow do frontend gera um artefato de build; não publica a aplicação.",
+    year: "2026—"
+  },
+  {
+    id: "menubuilder",
+    num: "03",
     title: "MenuBuilder",
     subtitle: "Cardápios QR inteligentes",
     desc: "Plataforma SaaS para restaurantes gerenciarem cardápios digitais em tempo real. Painel administrativo, geração de QR único e pedidos sem contato.",
@@ -36,7 +61,7 @@ const PROJECTS = [
   },
   {
     id: "infra",
-    num: "03",
+    num: "04",
     title: "Projeto Infra",
     subtitle: "Estudo de arquitetura Angular",
     desc: "Aplicação para estudo aprofundado de componentes, rotas, guards e serviços. Foco em estrutura modular e padrões de comunicação.",
@@ -49,7 +74,7 @@ const PROJECTS = [
   },
   {
     id: "sidebar",
-    num: "04",
+    num: "05",
     title: "Sidebar",
     subtitle: "DOM e interatividade",
     desc: "Componente de navegação lateral construído do zero. Estudo de manipulação direta do DOM, transições e estados.",
@@ -62,7 +87,7 @@ const PROJECTS = [
   },
   {
     id: "netflix",
-    num: "05",
+    num: "06",
     title: "Netflix Login Clone",
     subtitle: "Recriação fiel de UI",
     desc: "Recriação da tela de login da Netflix com foco em estruturação semântica e estilização precisa.",
@@ -80,23 +105,23 @@ const OTHER_PROJECTS = PROJECTS.filter((project) => !project.featured);
 
 const EXPERIENCE = [
   {
-    role: "Desenvolvedor Full-stack",
-    org: "Projetos PJ",
-    period: "2025 — atual",
-    desc: "Atuo na criação de funcionalidades e sustentação de plataformas com Angular e .NET. Refatoro módulos legados com Clean Code e SOLID, otimizo consultas SQL Server e melhoro a performance do front-end com Lazy Loading e Change Detection.",
-    stack: ["Angular", "TypeScript", ".NET", "C#", "SQL Server", "Clean Code"]
+    role: "Desenvolvedor Full-stack Júnior",
+    org: "Faso",
+    period: "fev. 2025 — atual",
+    desc: "Desenvolvimento e modernização de sistemas com Angular e C#/.NET. Consolidei cerca de 7 a 8 fluxos de alertas, centralizei a preparação e o envio de notificações e otimizei consultas em MongoDB. Participo da concepção técnica e da implementação de funcionalidades.",
+    stack: ["Angular", ".NET", "C#", "MongoDB", "SQL Server", "Azure DevOps"]
   },
   {
     role: "Tecnólogo em Análise e Desenvolvimento de Sistemas",
     org: "PUCPR",
-    period: "2023 — 2026",
+    period: "2024 — 2026",
     desc: "Formação em desenvolvimento de software, banco de dados e engenharia de sistemas, com conclusão prevista para 2026.",
     stack: ["Engenharia de Software", "Banco de Dados", "Metodologias Ágeis"]
   },
   {
     role: "Técnico em Mecatrônica",
     org: "SENAI",
-    period: "concluído em 2022",
+    period: "concluído",
     desc: "Formação técnica que fortaleceu minha base em lógica, automação, análise de sistemas e resolução estruturada de problemas.",
     stack: ["Automação", "Lógica", "Resolução de Problemas"]
   }
@@ -104,10 +129,10 @@ const EXPERIENCE = [
 
 const SKILLS = [
   { group: "Frontend", items: ["Angular 14+", "React", "TypeScript", "Tailwind CSS", "Bootstrap"] },
-  { group: "Backend", items: ["C#", ".NET Core / Framework", "Node.js", "Express"] },
-  { group: "Dados", items: ["SQL Server", "PostgreSQL", "Supabase", "MongoDB", "Prisma"] },
-  { group: "DevOps & entrega", items: ["Git / GitFlow", "Docker", "Azure DevOps", "Vercel"] },
-  { group: "Métodos", items: ["Scrum", "Kanban"] }
+  { group: "Backend", items: ["C#", ".NET", "Node.js", "Fastify", "Express", "BullMQ"] },
+  { group: "Dados", items: ["SQL Server", "PostgreSQL", "MongoDB", "Prisma", "Redis"] },
+  { group: "Qualidade e entrega", items: ["Vitest", "Testes de integração", "GitHub Actions", "Docker", "Azure DevOps", "Git / GitFlow"] },
+  { group: "Práticas", items: ["Clean Code", "SOLID", "Scrum", "Kanban"] }
 ];
 
 // ---------- UTIL HOOKS ----------
@@ -135,6 +160,7 @@ function useReveal() {
 function useCursor() {
   const [pos, setPos] = useState({ x: -100, y: -100, hover: false });
   useEffect(() => {
+    if (!window.matchMedia("(hover: hover) and (pointer: fine)").matches) return;
     const onMove = (e) => {
       setPos((p) => ({ ...p, x: e.clientX, y: e.clientY }));
     };
@@ -184,8 +210,10 @@ function Cursor() {
   );
 }
 
-function Nav({ onContact }) {
+function Nav() {
   const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const menuButtonRef = useRef(null);
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", onScroll);
@@ -193,21 +221,29 @@ function Nav({ onContact }) {
   }, []);
   const linkCls = "nav-link";
   return (
-    <header className={`nav ${scrolled ? "nav--scrolled" : ""}`}>
+    <header className={`nav ${scrolled ? "nav--scrolled" : ""}`} onKeyDown={(event) => {
+      if (event.key === "Escape" && menuOpen) {
+        setMenuOpen(false);
+        menuButtonRef.current?.focus();
+      }
+    }}>
       <a href="#top" className="nav__brand">
         <span className="nav__mark">ML</span>
         <span className="nav__name">Marcelo Luan</span>
         <span className="nav__status"><i /> Curitiba, PR</span>
       </a>
-      <nav className="nav__links">
+      <nav id="main-navigation" className="nav__links" aria-label="Navegação principal" data-open={menuOpen} onClick={() => setMenuOpen(false)}>
         <a className={linkCls} href="#work"><span className="nav__num">01</span>Trabalho</a>
         <a className={linkCls} href="#about"><span className="nav__num">02</span>Sobre</a>
         <a className={linkCls} href="#stack"><span className="nav__num">03</span>Stack</a>
         <a className={linkCls} href="#contact"><span className="nav__num">04</span>Contato</a>
       </nav>
-      <button className="nav__cta" onClick={onContact}>
+      <a className="nav__cta" href={WHATSAPP_URL} target="_blank" rel="noreferrer" onClick={() => setMenuOpen(false)} aria-label="Fale comigo pelo WhatsApp">
         <span>Fale comigo</span>
         <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 11L11 3M11 3H5M11 3V9" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+      </a>
+      <button ref={menuButtonRef} className="nav__toggle" aria-label={menuOpen ? "Fechar menu" : "Abrir menu"} aria-expanded={menuOpen} aria-controls="main-navigation" onClick={() => setMenuOpen(!menuOpen)}>
+        <span aria-hidden="true">{menuOpen ? "✕" : "☰"}</span>
       </button>
     </header>
   );
@@ -248,7 +284,7 @@ function HeroEditorial({ showMarquee }) {
             Ver projetos
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 11L11 3M11 3H5M11 3V9" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
           </a>
-          <a href="#contact" className="btn btn--ghost btn--lg">Conversar</a>
+          <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="btn btn--ghost btn--lg">WhatsApp ↗</a>
           <a href={CV_URL} download className="btn btn--ghost btn--lg">Baixar currículo</a>
         </div>
       </div>
@@ -362,7 +398,7 @@ function ProjectsGrid({ onOpen, density }) {
 
   return (
     <section id="work" className="section section--work">
-      <SectionLabel num="01" kicker="Selected work" title="Projetos em destaque" />
+      <SectionLabel num="01" kicker="Na prática" title="Projetos em destaque" />
       {FEATURED_PROJECT && <FeaturedProject project={FEATURED_PROJECT} onOpen={onOpen} />}
 
       <div className="projects-secondary-heading">
@@ -378,6 +414,7 @@ function ProjectsGrid({ onOpen, density }) {
           carouselRef.current?.style.setProperty("--pointer-y", "0");
         }}
         onPointerDown={(event) => {
+          if (event.target.closest(".carousel-arrow, .carousel-dot, a")) return;
           dragStartRef.current = event.clientX;
           draggedRef.current = false;
         }}
@@ -392,8 +429,10 @@ function ProjectsGrid({ onOpen, density }) {
         }}
         onPointerCancel={() => { dragStartRef.current = null; }}
         onKeyDown={(event) => {
-          if (event.key === "ArrowRight") select(active + 1);
-          if (event.key === "ArrowLeft") select(active - 1);
+          if (event.key === "ArrowRight" || event.key === "ArrowLeft") {
+            event.preventDefault();
+            select(active + (event.key === "ArrowRight" ? 1 : -1));
+          }
         }}
         role="region"
         aria-roledescription="carrossel"
@@ -422,6 +461,7 @@ function ProjectsGrid({ onOpen, density }) {
               aria-label={`${project.title}: ${project.subtitle}. ${index === active ? "Abrir detalhes" : "Selecionar projeto"}`}
               aria-current={index === active ? "true" : undefined}
             >
+              {!project.img && <span className="project-cover" aria-hidden="true"><small>Reservas · empresas · lembretes</small><span className="project-cover__grid">{Array.from({ length: 21 }, (_, day) => <i key={day} />)}</span></span>}
               <span className="magnetic-card__shade" />
               <span className="magnetic-card__number">{project.num}</span>
               <span className="magnetic-card__label">
@@ -438,6 +478,10 @@ function ProjectsGrid({ onOpen, density }) {
             <p>{OTHER_PROJECTS[active].desc}</p>
             <div className="magnetic-carousel__tags">
               {OTHER_PROJECTS[active].tags.map((tag) => <span key={tag} className="tag">{tag}</span>)}
+            </div>
+            <div className="project-links">
+              <button className="btn btn--primary" onClick={() => onOpen(OTHER_PROJECTS[active])}>Explorar projeto ↗</button>
+              <a className="project-links__source" href={OTHER_PROJECTS[active].link} target="_blank" rel="noreferrer">{OTHER_PROJECTS[active].linkLabel || "Ver demonstração"} ↗</a>
             </div>
           </div>
           <div className="magnetic-carousel__controls">
@@ -555,17 +599,17 @@ function ProjectRow({ p, i, onOpen }) {
 function About() {
   return (
     <section id="about" className="section">
-      <SectionLabel num="02" kicker="About" title="Currículo, em prosa." />
+      <SectionLabel num="02" kicker="Sobre mim" title="Currículo, em prosa." />
       <div className="about">
         <Reveal className="about__lede" delay={80}>
           <p>
             Sou desenvolvedor full-stack com atuação no ecossistema Angular e .NET. Trabalho tanto na entrega de novas funcionalidades quanto na sustentação técnica e modernização de sistemas legados.
           </p>
           <p>
-            Aplico Clean Code e SOLID para tornar módulos mais fáceis de manter, otimizo consultas em SQL Server e busco performance no front-end. Curso ADS na PUCPR e também sou técnico em Mecatrônica pelo SENAI.
+            Consolido fluxos de alertas em componentes reutilizáveis e reviso consultas para buscar apenas os dados necessários. Nos projetos próprios, aprofundo testes de integração, isolamento de dados e processamento assíncrono. Curso ADS na PUCPR e sou técnico em Mecatrônica pelo SENAI.
           </p>
           <p>
-            Também utilizo ferramentas de IA como Codex, Claude Code e Kimi K3 no fluxo de desenvolvimento para acelerar investigação, prototipação, debugging e documentação. Uso esses recursos como apoio técnico, mantendo validação, decisões de arquitetura e qualidade do código sob minha responsabilidade.
+            Utilizo assistentes de IA no desenvolvimento para apoiar investigação, prototipação, depuração e documentação. Reviso as sugestões, valido o comportamento com testes e mantenho as decisões de arquitetura e a qualidade do código sob minha responsabilidade.
           </p>
         </Reveal>
         <div className="timeline">
@@ -596,13 +640,13 @@ function Stack() {
     "Interfaces responsivas, componentes reutilizáveis e experiências que respeitam o conteúdo.",
     "APIs, autenticação e regras de negócio pensadas para sustentar o produto.",
     "Modelagem, persistência e consultas para transformar dados em uma base confiável.",
-    "Versionamento, deploy e uma rotina de entrega simples de acompanhar.",
+    "Testes automatizados, integração com bancos reais e pipelines para verificar cada mudança.",
     "Código organizado, decisões claras e evolução contínua em cada projeto.",
   ];
 
   return (
     <section id="stack" className="section">
-      <SectionLabel num="03" kicker="Tech stack" title="Ferramentas em rotação." />
+      <SectionLabel num="03" kicker="Tecnologias" title="Ferramentas em rotação." />
       <div className="interactive-skill-grid">
         <div className="interactive-skill-grid__head">
           <span className="meta-key">explore a grade</span>
@@ -617,6 +661,8 @@ function Stack() {
               data-index={index}
               data-active={index === activeIndex}
               role="tab"
+              id={`skill-tab-${index}`}
+              aria-controls="skill-panel"
               aria-selected={index === activeIndex}
               onMouseEnter={() => setActiveIndex(index)}
               onFocus={() => setActiveIndex(index)}
@@ -629,7 +675,7 @@ function Stack() {
             </button>
           ))}
         </div>
-        <div className="interactive-skill-grid__active" aria-live="polite">
+        <div id="skill-panel" className="interactive-skill-grid__active" role="tabpanel" aria-labelledby={`skill-tab-${activeIndex}`}>
           <div>
             <span className="meta-key">em foco / 0{activeIndex + 1}</span>
             <strong>{activeGroup.group}</strong>
@@ -645,27 +691,31 @@ function Stack() {
 }
 function Contact() {
   const [copied, setCopied] = useState("");
-  const copy = (label, value) => {
-    navigator.clipboard?.writeText(value);
-    setCopied(label);
-    setTimeout(() => setCopied(""), 1800);
+  const copy = async (label, value) => {
+    try {
+      await navigator.clipboard.writeText(value);
+      setCopied(label);
+      setTimeout(() => setCopied(""), 1800);
+    } catch {
+      setCopied("");
+    }
   };
   const items = [
-    { label: "Email", value: "marceloluan125@gmail.com", href: "mailto:marceloluan125@gmail.com" },
+    { label: "WhatsApp", value: "+55 (41) 98482-1419", href: WHATSAPP_URL },
+    { label: "Email", value: CONTACT_EMAIL, href: `mailto:${CONTACT_EMAIL}` },
     { label: "LinkedIn", value: "linkedin.com/in/marcelo-luan", href: "https://www.linkedin.com/in/marcelo-luan/" },
-    { label: "GitHub", value: "github.com/OKktsu", href: "https://github.com/OKktsu" },
-    { label: "WhatsApp", value: "+55 (41) 98482-1419", href: "https://wa.me/5541984821419" }
+    { label: "GitHub", value: "github.com/OKktsu", href: "https://github.com/OKktsu" }
   ];
   return (
     <section id="contact" className="section section--contact">
-      <SectionLabel num="04" kicker="Contact" title="Vamos construir alguma coisa." />
+      <SectionLabel num="04" kicker="Contato" title="Vamos construir alguma coisa." />
       <div className="contact">
         <Reveal className="contact__intro" delay={80}>
           <p className="contact__big">
             Vamos conversar sobre <span className="hi">software bem construído</span>, modernização de sistemas, .NET ou Angular.
           </p>
-          <a className="btn btn--primary btn--lg" href="mailto:marceloluan125@gmail.com">
-            marceloluan125@gmail.com
+          <a className="btn btn--primary btn--lg contact__primary" href={WHATSAPP_URL} target="_blank" rel="noreferrer">
+            Conversar pelo WhatsApp
             <svg width="16" height="16" viewBox="0 0 14 14" fill="none"><path d="M3 11L11 3M11 3H5M11 3V9" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
           </a>
           <a className="btn btn--ghost btn--lg contact__cv" href={CV_URL} download>
@@ -755,17 +805,22 @@ function Modal({ project, onClose }) {
             <span className={`status status--${project.status === "Live" ? "live" : "dev"}`}><i />{project.status}</span>
           </div>
           <p className="modal__desc">{project.desc}</p>
+          {project.highlights && <div className="project-highlights">
+            {project.highlights.map((highlight) => <div key={highlight.title}><h4>{highlight.title}</h4><p>{highlight.text}</p></div>)}
+          </div>}
+          {project.note && <p className="project-note">{project.note}</p>}
           <div className="modal__meta">
-            <div><span className="meta-key">role</span>{project.role}</div>
-            <div><span className="meta-key">year</span>{project.year}</div>
+            <div><span className="meta-key">atuação</span>{project.role}</div>
+            <div><span className="meta-key">período</span>{project.year}</div>
             <div><span className="meta-key">stack</span>{project.tags.join(" · ")}</div>
           </div>
           <div className="modal__actions">
             {project.link ? (
-              <a href={project.link} target="_blank" rel="noreferrer" className="btn btn--primary">Ver demonstração →</a>
+              <a href={project.link} target="_blank" rel="noreferrer" className="btn btn--primary">{project.linkLabel || "Ver demonstração"} →</a>
             ) : (
               <span className="tag tag--soft">Repositório privado</span>
             )}
+            {project.repo && project.repo !== project.link && <a href={project.repo} target="_blank" rel="noreferrer" className="btn btn--ghost">Código no GitHub ↗</a>}
             <button onClick={onClose} className="btn btn--ghost">Fechar</button>
           </div>
         </div>
@@ -779,16 +834,23 @@ function App() {
   const [modal, setModal] = useState(null);
 
   useEffect(() => {
-    document.documentElement.setAttribute("data-cursor", "custom");
-    return () => document.documentElement.removeAttribute("data-cursor");
+    const pointer = window.matchMedia("(hover: hover) and (pointer: fine)");
+    const updateCursor = () => {
+      if (pointer.matches) document.documentElement.setAttribute("data-cursor", "custom");
+      else document.documentElement.removeAttribute("data-cursor");
+    };
+    updateCursor();
+    pointer.addEventListener("change", updateCursor);
+    return () => {
+      pointer.removeEventListener("change", updateCursor);
+      document.documentElement.removeAttribute("data-cursor");
+    };
   }, []);
-
-  const scrollToContact = () => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
 
   return (
     <>
       <Cursor />
-      <Nav onContact={scrollToContact} />
+      <Nav />
       <main>
         <Hero variant="editorial" showMarquee />
         <ProjectsGrid onOpen={setModal} density="comfy" />

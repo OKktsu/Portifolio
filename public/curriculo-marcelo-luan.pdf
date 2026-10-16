@@ -1,500 +1,130 @@
 %PDF-1.4
-%âãÏÓ
+%“Œ‹ž ReportLab Generated PDF document (opensource)
 1 0 obj
 <<
-/Producer (pypdf)
+/F1 2 0 R /F2 3 0 R
 >>
 endobj
 2 0 obj
 <<
-/Type /Pages
-/Count 1
-/Kids [ 4 0 R ]
+/BaseFont /Helvetica /Encoding /WinAnsiEncoding /Name /F1 /Subtype /Type1 /Type /Font
 >>
 endobj
 3 0 obj
 <<
-/Type /Catalog
-/Pages 2 0 R
+/BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding /Name /F2 /Subtype /Type1 /Type /Font
 >>
 endobj
 4 0 obj
 <<
-/Annots [ 5 0 R 6 0 R 7 0 R 8 0 R 9 0 R 10 0 R ]
-/Contents 11 0 R
-/MediaBox [ 0 0 595.2756 841.8898 ]
-/Resources <<
-/Font <<
-/F1 12 0 R
-/F1-0 13 0 R
-/F2 14 0 R
->>
-/ProcSet [ /ImageB /ImageC /ImageI /PDF /Text ]
->>
-/Rotate 0
-/Trans <<
->>
-/Type /Page
-/Parent 2 0 R
+/A <<
+/S /URI /Type /Action /URI (https://www.linkedin.com/in/marcelo-luan/)
+>> /Border [ 0 0 0 ] /Rect [ 56 725.29 86.24 734.89 ] /Subtype /Link /Type /Annot
 >>
 endobj
 5 0 obj
 <<
 /A <<
-/S /URI
-/Type /Action
-/URI (https\072\057\057www\056linkedin\056com\057in\057marceloluanp\057)
->>
-/Border [ 0 0 0 ]
-/Rect [ 290.3983 743.0101 319.8823 752.3701 ]
-/Subtype /Link
-/Type /Annot
+/S /URI /Type /Action /URI (https://github.com/OKktsu)
+>> /Border [ 0 0 0 ] /Rect [ 92.768 725.29 117.664 734.89 ] /Subtype /Link /Type /Annot
 >>
 endobj
 6 0 obj
 <<
 /A <<
-/S /URI
-/Type /Action
-/URI (https\072\057\057github\056com\057OKktsu)
->>
-/Border [ 0 0 0 ]
-/Rect [ 326.2471 743.0101 350.5207 752.3701 ]
-/Subtype /Link
-/Type /Annot
+/S /URI /Type /Action /URI (https://portifolio-two-delta-16.vercel.app)
+>> /Border [ 0 0 0 ] /Rect [ 124.192 725.29 153.536 734.89 ] /Subtype /Link /Type /Annot
 >>
 endobj
 7 0 obj
 <<
 /A <<
-/S /URI
-/Type /Action
-/URI (https\072\057\057portifolio\055two\055delta\05516\056vercel\056app)
->>
-/Border [ 0 0 0 ]
-/Rect [ 356.8855 743.0101 385.4959 752.3701 ]
-/Subtype /Link
-/Type /Annot
+/S /URI /Type /Action /URI (https://github.com/OKktsu/AgendaPro)
+>> /Border [ 0 0 0 ] /Rect [ 56 341.69 185.392 351.69 ] /Subtype /Link /Type /Annot
 >>
 endobj
 8 0 obj
 <<
 /A <<
-/S /URI
-/Type /Action
-/URI (https\072\057\057frontend\055beta\055kohl\05559\056vercel\056app\057)
->>
-/Border [ 0 0 0 ]
-/Rect [ 62.69291 442.9001 146.0285 452.3201 ]
-/Subtype /Link
-/Type /Annot
+/S /URI /Type /Action /URI (https://frontend-beta-kohl-59.vercel.app/)
+>> /Border [ 0 0 0 ] /Rect [ 56 271.09 108.016 280.69 ] /Subtype /Link /Type /Annot
 >>
 endobj
 9 0 obj
 <<
 /A <<
-/S /URI
-/Type /Action
-/URI (https\072\057\057github\056com\057OKktsu\057Mensagens)
->>
-/Border [ 0 0 0 ]
-/Rect [ 152.4341 442.9001 229.6546 452.3201 ]
-/Subtype /Link
-/Type /Annot
+/S /URI /Type /Action /URI (https://github.com/OKktsu/Mensagens)
+>> /Border [ 0 0 0 ] /Rect [ 114.544 271.09 155 280.69 ] /Subtype /Link /Type /Annot
 >>
 endobj
 10 0 obj
 <<
 /A <<
-/S /URI
-/Type /Action
-/URI (https\072\057\057github\056com\057OKktsu\057MenuBuilderBack)
->>
-/Border [ 0 0 0 ]
-/Rect [ 62.69291 393.2888 139.9134 403.0888 ]
-/Subtype /Link
-/Type /Annot
+/S /URI /Type /Action /URI (https://github.com/OKktsu/MenuBuilderBack)
+>> /Border [ 0 0 0 ] /Rect [ 56 229.69 96.456 239.69 ] /Subtype /Link /Type /Annot
 >>
 endobj
 11 0 obj
 <<
-/Length 7782
+/Annots [ 4 0 R 5 0 R 6 0 R 7 0 R 8 0 R 9 0 R 10 0 R ] /Contents 15 0 R /MediaBox [ 0 0 595.28 841.89 ] /Parent 14 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>> /Rotate 0 
+  /Trans <<
+
+>> /Type /Page
 >>
-stream
-q
-1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
-q
-1 0 0 1 62.69291 771.3701 cm
-q
-.090196 .090196 .098039 rg
-BT 1 0 0 1 0 3 Tm /F2 19 Tf 22 TL (Marcelo Luan Pinheiro de Mello) Tj T* ET
-Q
-Q
-q
-1 0 0 1 62.69291 756.3701 cm
-q
-.203922 .211765 .231373 rg
-BT 1 0 0 1 0 2.8 Tm /F2 10.2 Tf 13 TL (DESENVOLVEDOR FULL STACK) Tj T* ET
-Q
-Q
-q
-1 0 0 1 62.69291 742.1701 cm
-q
-BT 1 0 0 1 0 2.4 Tm 10.2 TL /F1 7.8 Tf .384314 .4 .427451 rg (Curitiba, PR | \(41\) 98482-1419 | marcelo.luan.mello@gmail.com | ) Tj (LinkedIn) Tj ( | ) Tj (GitHub) Tj ( | ) Tj (Portf\363lio) Tj T* ET
-Q
-Q
-q
-1 0 0 1 62.69291 740.1701 cm
-Q
-q
-1 0 0 1 62.69291 721.1701 cm
-q
-.203922 .211765 .231373 rg
-BT 1 0 0 1 0 1.8 Tm /F2 9.2 Tf 11 TL (RESUMO PROFISSIONAL) Tj T* ET
-Q
-Q
-q
-1 0 0 1 62.69291 716.6701 cm
-q
-.5 w
-1 J
-.85098 .854902 .87451 RG
-n 0 0 m 469.8898 0 l S
-Q
-Q
-q
-1 0 0 1 62.69291 679.3701 cm
-q
-.090196 .090196 .098039 rg
-BT 1 0 0 1 0 24.75 Tm /F1 8.55 Tf 11.1 TL (Desenvolvedor Full Stack J\372nior com experi\352ncia em transformar processos dispersos em solu\347\365es reutiliz\341veis e) Tj T* (escal\341veis. Contribuo da concep\347\343o t\351cnica \340 implementa\347\343o, com foco na moderniza\347\343o de sistemas legados, efici\352ncia) Tj T* (no acesso a dados e qualidade de c\363digo para tornar as entregas mais sustent\341veis para o produto e para o time.) Tj T* ET
-Q
-Q
-q
-1 0 0 1 62.69291 677.3701 cm
-Q
-q
-1 0 0 1 62.69291 658.3701 cm
-q
-.203922 .211765 .231373 rg
-BT 1 0 0 1 0 1.8 Tm /F2 9.2 Tf 11 TL (EXPERI\312NCIA PROFISSIONAL) Tj T* ET
-Q
-Q
-q
-1 0 0 1 62.69291 653.8701 cm
-q
-.5 w
-1 J
-.85098 .854902 .87451 RG
-n 0 0 m 469.8898 0 l S
-Q
-Q
-q
-1 0 0 1 62.69291 638.7701 cm
-q
-.090196 .090196 .098039 rg
-BT 1 0 0 1 0 2 Tm /F2 9.1 Tf 11.1 TL (Faso | Desenvolvedor Full Stack J\372nior) Tj T* ET
-Q
-Q
-q
-1 0 0 1 62.69291 628.9701 cm
-q
-.384314 .4 .427451 rg
-BT 1 0 0 1 0 1.95 Tm /F1 7.85 Tf 9.8 TL (fev. 2025 - atual | Curitiba, PR) Tj T* ET
-Q
-Q
-q
-1 0 0 1 62.69291 608.0701 cm
-q
-BT 1 0 0 1 0 12.65 Tm /F1 10 Tf 12 TL .090196 .090196 .098039 rg (\177) Tj ET
-.090196 .090196 .098039 rg
-BT 1 0 0 1 8 12.65 Tm /F1 8.25 Tf 10.45 TL 1.5 0 Td (Consolidei cerca de 7 a 8 fluxos de alertas em C# e .NET, substituindo l\363gicas duplicadas por m\351todos curtos, descritivos e) Tj T* -1.5 0 Td (reutiliz\341veis.) Tj T* ET
-Q
-Q
-q
-1 0 0 1 62.69291 585.1701 cm
-q
-BT 1 0 0 1 0 12.65 Tm /F1 10 Tf 12 TL .090196 .090196 .098039 rg (\177) Tj ET
-.090196 .090196 .098039 rg
-BT 1 0 0 1 8 12.65 Tm /F1 8.25 Tf 10.45 TL 1.5 0 Td (Centralizei a prepara\347\343o e o envio de mensagens via WhatsApp, transformando entidades brutas em notifica\347\365es) Tj T* -1.5 0 Td (padronizadas e facilitando a cria\347\343o de novos alertas.) Tj T* ET
-Q
-Q
-q
-1 0 0 1 62.69291 562.2701 cm
-q
-BT 1 0 0 1 0 12.65 Tm /F1 10 Tf 12 TL .090196 .090196 .098039 rg (\177) Tj ET
-.090196 .090196 .098039 rg
-BT 1 0 0 1 8 12.65 Tm /F1 8.25 Tf 10.45 TL 1.5 0 Td (Otimizei consultas em MongoDB ao revisar o fluxo de busca e limitar o retorno aos dados necess\341rios, reduzindo) Tj T* -1.5 0 Td (processamento desnecess\341rio nas telas.) Tj T* ET
-Q
-Q
-q
-1 0 0 1 62.69291 539.3701 cm
-q
-BT 1 0 0 1 0 12.65 Tm /F1 10 Tf 12 TL .090196 .090196 .098039 rg (\177) Tj ET
-.090196 .090196 .098039 rg
-BT 1 0 0 1 8 12.65 Tm /F1 8.25 Tf 10.45 TL 1.5 0 Td (Participei da concep\347\343o de solu\347\365es, da idealiza\347\343o \340 proposta t\351cnica, contribuindo com requisitos, desenho de arquitetura) Tj T* -1.5 0 Td (e constru\347\343o de funcionalidades.) Tj T* ET
-Q
-Q
-q
-1 0 0 1 62.69291 526.9201 cm
-q
-BT 1 0 0 1 0 2.2 Tm /F1 10 Tf 12 TL .090196 .090196 .098039 rg (\177) Tj ET
-.090196 .090196 .098039 rg
-BT 1 0 0 1 8 2.2 Tm /F1 8.25 Tf 10.45 TL 1.5 0 Td (Atuei em rotinas \341geis com Scrum e Kanban, GitFlow e acompanhamento de entregas no Azure DevOps.) Tj T* -1.5 0 Td ET
-Q
-Q
-q
-1 0 0 1 62.69291 522.9201 cm
-Q
-q
-1 0 0 1 62.69291 503.9201 cm
-q
-.203922 .211765 .231373 rg
-BT 1 0 0 1 0 1.8 Tm /F2 9.2 Tf 11 TL (PROJETOS EM DESTAQUE) Tj T* ET
-Q
-Q
-q
-1 0 0 1 62.69291 499.4201 cm
-q
-.5 w
-1 J
-.85098 .854902 .87451 RG
-n 0 0 m 469.8898 0 l S
-Q
-Q
-q
-1 0 0 1 62.69291 484.3201 cm
-q
-.090196 .090196 .098039 rg
-BT 1 0 0 1 0 2 Tm /F2 9.1 Tf 11.1 TL (Mensagens | Aplica\347\343o full stack de comunica\347\343o) Tj T* ET
-Q
-Q
-q
-1 0 0 1 62.69291 474.5201 cm
-q
-.384314 .4 .427451 rg
-BT 1 0 0 1 0 1.95 Tm /F1 7.85 Tf 9.8 TL (React, Node.js e PostgreSQL) Tj T* ET
-Q
-Q
-q
-1 0 0 1 62.69291 452.3201 cm
-q
-.090196 .090196 .098039 rg
-BT 1 0 0 1 0 13.65 Tm /F1 8.55 Tf 11.1 TL (Aplica\347\343o de mensagens com interface inspirada em plataformas de comunica\347\343o, criada para estudar arquitetura full) Tj T* (stack, modelagem de dados e integra\347\343o entre front-end e back-end.) Tj T* ET
-Q
-Q
-q
-1 0 0 1 62.69291 442.5201 cm
-q
-BT 1 0 0 1 0 1.95 Tm 9.8 TL /F1 7.85 Tf .203922 .211765 .231373 rg (Ver aplica\347\343o publicada) Tj .384314 .4 .427451 rg ( | ) Tj .203922 .211765 .231373 rg (Reposit\363rio no GitHub) Tj T* ET
-Q
-Q
-q
-1 0 0 1 62.69291 439.5201 cm
-Q
-q
-1 0 0 1 62.69291 438.1201 cm
-q
-.4 w
-1 J
-.85098 .854902 .87451 RG
-n 0 0 m 469.8898 0 l S
-Q
-Q
-q
-1 0 0 1 62.69291 423.0201 cm
-q
-.090196 .090196 .098039 rg
-BT 1 0 0 1 0 2 Tm /F2 9.1 Tf 11.1 TL (MenuBuilder | Plataforma de card\341pios digitais) Tj T* ET
-Q
-Q
-q
-1 0 0 1 62.69291 413.2201 cm
-q
-.384314 .4 .427451 rg
-BT 1 0 0 1 0 1.95 Tm /F1 7.85 Tf 9.8 TL (Angular, .NET e SQL Server) Tj T* ET
-Q
-Q
-q
-1 0 0 1 62.69291 402.1201 cm
-q
-.090196 .090196 .098039 rg
-BT 1 0 0 1 0 2.55 Tm /F1 8.55 Tf 11.1 TL (Desenvolvimento de funcionalidades e manuten\347\343o de uma plataforma para cria\347\343o e gest\343o de card\341pios digitais.) Tj T* ET
-Q
-Q
-q
-1 0 0 1 62.69291 392.3201 cm
-q
-.203922 .211765 .231373 rg
-BT 1 0 0 1 0 1.95 Tm /F1 7.85 Tf 9.8 TL (Reposit\363rio no GitHub) Tj T* ET
-Q
-Q
-q
-1 0 0 1 62.69291 390.3201 cm
-Q
-q
-1 0 0 1 62.69291 371.3201 cm
-q
-.203922 .211765 .231373 rg
-BT 1 0 0 1 0 1.8 Tm /F2 9.2 Tf 11 TL (COMPET\312NCIAS T\311CNICAS) Tj T* ET
-Q
-Q
-q
-1 0 0 1 62.69291 366.8201 cm
-q
-.5 w
-1 J
-.85098 .854902 .87451 RG
-n 0 0 m 469.8898 0 l S
-Q
-Q
-q
-1 0 0 1 62.69291 306.8201 cm
-q
-0 0 0 rg
-BT /F1 10 Tf 12 TL ET
-q
-1 0 0 1 0 36 cm
-q
-BT 1 0 0 1 0 12.25 Tm 10 TL /F2 7.75 Tf .090196 .090196 .098039 rg (Front-end) Tj /F1 7.75 Tf  T* (Angular, React, TypeScript, JavaScript, HTML e CSS) Tj T* ET
-Q
-Q
-q
-1 0 0 1 238.1102 36 cm
-q
-BT 1 0 0 1 0 12.25 Tm 10 TL /F2 7.75 Tf .090196 .090196 .098039 rg (Back-end) Tj /F1 7.75 Tf  T* (C#, .NET, Node.js, APIs REST e Prisma) Tj T* ET
-Q
-Q
-q
-1 0 0 1 0 13 cm
-q
-BT 1 0 0 1 0 12.25 Tm 10 TL /F2 7.75 Tf .090196 .090196 .098039 rg (Dados) Tj /F1 7.75 Tf  T* (SQL Server, PostgreSQL, MongoDB e Oracle) Tj T* ET
-Q
-Q
-q
-1 0 0 1 238.1102 3 cm
-q
-BT 1 0 0 1 0 22.25 Tm 10 TL /F2 7.75 Tf .090196 .090196 .098039 rg (Pr\341ticas e ferramentas) Tj /F1 7.75 Tf  T* (Clean Code, SOLID, Git, GitFlow, Docker, Azure DevOps, Scrum e) Tj T* (Kanban) Tj T* ET
-Q
-Q
-q
-Q
-Q
-Q
-q
-1 0 0 1 62.69291 304.8201 cm
-Q
-q
-1 0 0 1 62.69291 285.8201 cm
-q
-.203922 .211765 .231373 rg
-BT 1 0 0 1 0 1.8 Tm /F2 9.2 Tf 11 TL (FORMA\307\303O) Tj T* ET
-Q
-Q
-q
-1 0 0 1 62.69291 281.3201 cm
-q
-.5 w
-1 J
-.85098 .854902 .87451 RG
-n 0 0 m 469.8898 0 l S
-Q
-Q
-q
-1 0 0 1 62.69291 266.2201 cm
-q
-.090196 .090196 .098039 rg
-BT 1 0 0 1 0 2.55 Tm /F1 8.55 Tf 11.1 TL (An\341lise e Desenvolvimento de Sistemas - PUCPR | 2024 - 2026 \(em andamento\)) Tj T* ET
-Q
-Q
-q
-1 0 0 1 62.69291 255.1201 cm
-q
-.090196 .090196 .098039 rg
-BT 1 0 0 1 0 2.55 Tm /F1 8.55 Tf 11.1 TL (T\351cnico em Mecatr\364nica - SENAI | conclu\355do) Tj T* ET
-Q
-Q
- 
-
-Q
-
-q
-0.0 0.0 595.2756 841.8898 re
-W
-n
-1 0 0 1 0 0 cm
-BT
-/F1-0 12 Tf
-14.4 TL
-ET
-1 1 1 rg
-n
-55 738 500 20 re
-f*
-0.384314 0.4 0.427451 rg
-BT
-/F1-0 7.8 Tf
-9.36 TL
-ET
-BT
-1 0 0 1 56.7 747.2 Tm
-(Curitiba\054 PR \174 \05041\051 98482\0551419 \174 marcelo\056luan\056dev\100gmail\056com    \174 LinkedIn \174 GitHub \174 Portf\363lio) Tj
-T*
-ET
-Q
-
-
-endstream
 endobj
 12 0 obj
 <<
-/BaseFont /Helvetica
-/Encoding /WinAnsiEncoding
-/Name /F1
-/Subtype /Type1
-/Type /Font
+/PageMode /UseNone /Pages 14 0 R /Type /Catalog
 >>
 endobj
 13 0 obj
 <<
-/BaseFont /Helvetica
-/Encoding /WinAnsiEncoding
-/Name /F1
-/Subtype /Type1
-/Type /Font
+/Author (\(anonymous\)) /CreationDate (D:20261015223705-03'00') /Creator (\(unspecified\)) /Keywords () /ModDate (D:20261015223705-03'00') /Producer (ReportLab PDF Library - \(opensource\)) 
+  /Subject (\(unspecified\)) /Title (\(anonymous\)) /Trapped /False
 >>
 endobj
 14 0 obj
 <<
-/BaseFont /Helvetica-Bold
-/Encoding /WinAnsiEncoding
-/Name /F2
-/Subtype /Type1
-/Type /Font
+/Count 1 /Kids [ 11 0 R ] /Type /Pages
 >>
 endobj
+15 0 obj
+<<
+/Filter [ /ASCII85Decode /FlateDecode ] /Length 2549
+>>
+stream
+Gatm<?$k9b'>;_qR-3-A\drfN(E`,&/0SPj/-H$]qd+6:fRg'0/LoM^gLl$6*m%e4Tl/<,1rS%0Ai)Pik)=.li5[aJ5tlAXVmeTCfac8nA:'V4o-*ei(S<>Hm7=u`Xd3V-3uF%5QL4L-:7EfhDml,frjEg(l]>:U?nJuq*Xfqhg*+)'QZcWIE,ENm^`uFgS0^!(aWhTo;TNRjUI`+mq$3AgWpS^(kL^$sH*n/XksN@)cS7UgpLjH:pZ(60rq1M.2t)JgRa&IX^FH@tmCdYor$0D@>'J_mCO=sEDH#:,D]%NJ>_u-:YW>LUoIhe2T"TA9S[R-n/o;-(qNp1c7TP0Z=Wu]#^5A>7X?adj*]j0SHL=72]l_87[f=m8C.",2jP_49X+,J;<.f,.R)@U,M!WIciQ((UUrnu2\*6AVqWo0a3r<W@p22]Vm)M&;fk`@VlOKs(2`km"gDT_K1S3E/=KPWQCY<7+3mC,%T!W?>Zt]BW7:N.6jL&::C#^tCfni]lJ%t7V\)VXTB^-R(RAW1#aCrIYWTY[i?nZ$+8%N!9/LM.?$.og4Ejfr#(4KO\#pYHjq>Llp0,83@A!RbZcSNP'F=C56NWq)1r/45t'^;'e'N_r#A.<_51>tgE;c5a(6mTKUU:oM0[Aa*/1W70'SKncN+(NNXAPsNf?kHHX9C!k-cK`Nh6tTmWK'gg[caC)6Nuk.7Or+bO,g@RX[n<k#0s-`=^b[s^<Z5^g,pWmQgg9,7-qU3i@PJjhKFc&\gfj5IH\!mP:Xe]0QDW;bT*.b5(e`M\hCK("oCa;.CEcn2L7p*CElG8$(0QoiF50ilj##Ecs.Aq]K8")&GJ-<:je0(E<o`P>pH+@TeK`sgh[l#N&<p,OqqE'fg'p\$kiDWn2k)?s`Z3!]D_,oIN_bug.j?Nd8BFkOnXIff/h]>S@WP>np(EL$\4t_Tq.H]ZlrK$jJ?Fi!a9;`P"U<7(@USM-cBZMFPGe/u>O/FVY>^lSUm];ETog=/I'8VT(nRoU>_KUl,<@Q0CM,E@6:%b0SH'g/"24/_9QutD(k;>PoW=(0l^]CQgHasBA2'$70I.cJZbs`@UpG.f$m?`F;msOJD*S)N5I)j-Y1H3K(*Z2d=/LUjOu8OV^]lSNJ0B>n-r5%L;^QB+&Y!(UX(0LiShgT29Z/7X-)'QZ+3A%>YHNaR*7.0N9Hb/U*BFrHGm`&?MD-nDNtb,\JZ+r*&(=%@E6W"k<!s184NtQTjHNk4-9OQSBM)hE]N4p"0pjY[M*S-SKokOa"FPV'!th^]Y2+J'TlSX!R/fM)1<1Fj1K3;,8.]&7(&sMV<1"Z@G1SLo;"&LT"GnfU$oP:PmXq77@p(EAJ?%Z!""`D[1CW*7b,tW7"Y,T!oG:.A=AgNfYFA(3L>,C'@$Wp@LKB_H(!m$sFMHrdD:a.k?@U"FYOQB-:R<0QS(mpi4JVn3TXj7Aqfi!2bH>b@cX(fXjC\!7Ff,VI$/%`2i_s*#<<IZl[t#]hB/4':\0kf7b0QUe\b-!ES,]hW3(^C#l@aHfMYa5G;pGGlT)b$)`Fnp4>UtrV9L"-mWm_]_guodph[?PMWhSbShEIAm,r,_;<7@)%B=KAS<.jc8Dq#r/]3&a@0EeFLc;mBa#quf^!=O$9d\9V%?,dC`XZ7JkR<#\9>Z:FuhUdU`Tj-[<4t[T[H&OI]Id*AaH1iAq'WRE5q-Q'1Q"@cVLG/:&WfOY\9fXq'`'mAW(*WYD=R251;\A1)->:C*YpHBYYGGp;/W4oWrM=1ZW#K8$?MG4#'\9`3&OFK,'[g]lG];RX@D")W6S/WiLJab`;mhL="Z[e,KE><Kpml`m,0*>mll35H['*DV/gAb2!sLuSV$uoB1qY3b8fqm49R/WJAH9*-N:Z*9SiGq-+.Nr"-W4uSFGC0*Agt;,J245KT2:Z6<I8f@YKso2[BOFWgsPrc<KCk]^6+LCFWcWPR`XJ4c`Fr"RgMtNN*J2;MEaet^#)Er!lT@4:NecfbG9&,Lal`/mUVtH*;q$Ab$DndM+4Dn3/rU[^:Cc91"%X8nE7jK6QDl4dT>mrW6MM&.tEq9>Ga`hZIZnbf.1OE/INPn[@=858#j;h!"`lSar-#!.r4#UM&f%'/C=a&&kSlZO]G^/f60Q$i(isu3UO.,8YqE!$N>+(Uc0>hqX[u[4<o8gp[/7!m]>+Ca)]HX9Ph1<Y'T0@Dni_(7^nRe6BM-6(bmltiGsP3DV9d3Y5b#Q1pcjeZf8?7,YHOn.s0<fGtn%EGWmq4qk[%V5?^rt.;DHb"Ylf0Kaun=RQYbR<R8,(WL!`uMB^7\`Hq!Jm\G9GD7dB#h)g!klEO4i5P)E^;"]^T3;'1\I8T;>(2rJ[Xa*j5a/&d>+";$eB>dr)EjY9_GMVq.4<.U--C&HFHbB:ki,?Wa;0UtWYb?e5Y.!$9^LB>F`nU4OGLFNJBtlo[CBh*iOm40>b&TJRg$\Op,u*7hbc>ksXbX+Te&9A%qQZT#?b@fg<1E?pMCFW3*jA>Q-M0tbGY,7@?$Ch<F9AOI5i3*EEYVmX#65IOR/~>endstream
+endobj
 xref
-0 15
+0 16
 0000000000 65535 f 
-0000000015 00000 n 
-0000000054 00000 n 
-0000000113 00000 n 
-0000000162 00000 n 
-0000000446 00000 n 
-0000000663 00000 n 
-0000000855 00000 n 
-0000001073 00000 n 
-0000001293 00000 n 
-0000001498 00000 n 
-0000001710 00000 n 
-0000009545 00000 n 
-0000009653 00000 n 
-0000009761 00000 n 
+0000000061 00000 n 
+0000000102 00000 n 
+0000000209 00000 n 
+0000000321 00000 n 
+0000000501 00000 n 
+0000000671 00000 n 
+0000000859 00000 n 
+0000001035 00000 n 
+0000001217 00000 n 
+0000001394 00000 n 
+0000001576 00000 n 
+0000001833 00000 n 
+0000001903 00000 n 
+0000002184 00000 n 
+0000002245 00000 n 
 trailer
 <<
-/Size 15
-/Root 3 0 R
-/Info 1 0 R
+/ID 
+[<4869f6fe181d02ae0b0b3d2f67616a2b><4869f6fe181d02ae0b0b3d2f67616a2b>]
+% ReportLab generated PDF document -- digest (opensource)
+
+/Info 13 0 R
+/Root 12 0 R
+/Size 16
 >>
 startxref
-9874
+4886
 %%EOF
